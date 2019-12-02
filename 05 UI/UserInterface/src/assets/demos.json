@@ -1,0 +1,68 @@
+[
+  {
+    "url": "cssbasics",
+    "title": "CSS Basics",
+    "component": "CSSBindingComponent"
+  },
+  { "url": "flexbox", "title": "Flexbox", "component": "FlexboxComponent" },
+  {
+    "url": "flexmediaq",
+    "title": "Flexbox Media Query",
+    "component": "FlexMediaQueryComponent"
+  },
+  {
+    "url": "cssgrid",
+    "title": "CSS Grid",
+    "component": "CssgridComponent"
+  },
+  {
+    "url": "flexlayout",
+    "title": "Angular Flex Layout",
+    "component": "FlexLayoutComponent"
+  },
+  {
+    "url": "cssgrid-flex",
+    "title": "CSS Grid Flex Layout",
+    "component": "CssgridFlexlayoutComponent"
+  },
+  {
+    "url": "material",
+    "title": "Angular Material",
+    "component": "UsingMaterialComponent"
+  },
+  {
+    "url": "material-table",
+    "title": "Material Table",
+    "component": "MaterialTableComponent"
+  },
+  {
+    "url": "classic-dialog",
+    "title": "Material Dialog Classic",
+    "component": "ClassicDialogComponent"
+  },
+  {
+    "url": "material-dialog",
+    "title": "Dialog with @Input()",
+    "component": "MaterialDialogComponent"
+  },
+  {
+    "url": "stepper",
+    "title": "Material Stepper",
+    "component": "StepperComponent"
+  },
+  {
+    "url": "fonts",
+    "title": "Using Webfonts",
+    "component": "GoogleFontsComponent"
+  },
+  {
+    "url": "dragdrop",
+    "title": "Drag & Drop",
+    "component": "DragDropComponent"
+  },
+  {
+    "url": "virtualscroll",
+    "title": "VirtualScroll",
+    "component": "VirtualScrollComponent"
+  }
+]

@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header fxLayoutAlign="center center">
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <div>
+    <img
+      mat-card-image
+      src="../../assets/images/title-pic.png"
+      alt="Wartungsplaner"
+    />
+    <mat-card-content>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+        odio perspiciatis corporis non numquam ullam, eveniet pariatur dolorem,
+        commodi nemo sapiente id adipisci quaerat animi, molestias amet mollitia
+        vitae. Dolore.
+      </p>
+    </mat-card-content>
+  </div>
+  <mat-card-actions align="end">
+    <button mat-button *ngIf="view == 0" (click)="setView(2)">REGISTER</button>
+    <button mat-button *ngIf="view == 0" (click)="setView(1)">LOGIN</button>
+  </mat-card-actions>
+</mat-card>

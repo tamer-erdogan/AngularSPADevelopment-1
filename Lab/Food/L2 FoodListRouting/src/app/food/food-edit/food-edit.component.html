@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <label>Name</label>
+    <input type="text" [(ngModel)]="food.name" />
+  </div>
+  <div>
+    <label>Price</label>
+    <input type="number" [(ngModel)]="food.price" />
+  </div>
+  <div>
+    <label>Calories</label>
+    <input type="number" [(ngModel)]="food.calories" />
+  </div>
+</div>
+<a (onlick)="doSave()">Save</a>

@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Using Router Link & Basic Routing</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <a mat-raised-button [routerLink]="['/vouchers']"
+      >Simple Route (Show Vouchers)</a
+    ><br />
+    <a mat-raised-button [routerLink]="['/wotschers']"
+      >Redirect From 'Wotschers'</a
+    ><br />
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Using Query Params & Fragments</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <a
+      mat-raised-button
+      [routerLink]="['/vouchers', 2]"
+      [queryParams]="{ readonly: true }"
+      fragment="section5"
+      >Query & Fragment Params</a
+    >
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Route using Code</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <a mat-raised-button (click)="showVouchers()"
+      >Simple Route using Code (Show Vouchers)</a
+    ><br />
+    <a mat-raised-button (click)="showVoucherParam(2)"
+      >Code Param (Show Voucher ById)</a
+    ><br />
+  </mat-card-content>
+</mat-card>

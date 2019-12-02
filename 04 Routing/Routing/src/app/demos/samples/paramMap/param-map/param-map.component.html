@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutGap="16px" fxFlexFill>
+  <mat-card fxFlex="1 1 auto">
+    <mat-card-header>
+      <mat-card-title>
+        Menu
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="column">
+      <a
+        mat-raised-button
+        *ngFor="let lnk of links"
+        [routerLink]="['./' + lnk.id]"
+        [queryParams]="{ readonly: lnk.readonly }"
+      >
+        {{ lnk.label }}
+      </a>
+    </mat-card-content>
+  </mat-card>
+  <mat-card fxFlex="3 1 auto">
+    <mat-card-header>
+      <mat-card-title>
+        Subroute
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <router-outlet></router-outlet>
+    </mat-card-content>
+  </mat-card>
+</div>

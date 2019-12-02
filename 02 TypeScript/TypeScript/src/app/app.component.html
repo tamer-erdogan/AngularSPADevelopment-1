@@ -1,0 +1,16 @@
+<div
+  gdAreas="navbar navbar | main sidemenu | footer footer"
+  gdAreas.lt-md="navbar  | main  | footer "
+  gdGap="10px"
+  gdRows="70px auto 70px"
+  gdColumns="auto 220px"
+  gdColumns.lt-md="100%"
+  class="grid"
+>
+  <div gdArea="navbar" class="navbar"><app-navbar></app-navbar></div>
+  <div gdArea="main" class="main"><router-outlet></router-outlet></div>
+  <div gdArea="sidemenu" fxHide.lt-md class="footer">
+    <app-side-panel></app-side-panel>
+  </div>
+  <div gdArea="footer" class="footer"><app-footer></app-footer></div>
+</div>

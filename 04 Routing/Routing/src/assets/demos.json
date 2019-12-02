@@ -1,0 +1,32 @@
+[
+  {
+    "url": "routingbasics",
+    "title": "Routing Basics",
+    "component": "RoutingBasicsComponent"
+  },
+  {
+    "url": "parammap",
+    "title": "paramMap Observable",
+    "component": "ParamMapComponent"
+  },
+  {
+    "url": "childroutes",
+    "title": "Child Routes",
+    "component": "ChildRoutesComponent"
+  },
+  {
+    "url": "secondary",
+    "title": "Secondary Routes",
+    "component": "SecondaryRoutesComponent"
+  },
+  {
+    "url": "routeguards",
+    "title": "Route Guards",
+    "component": "RouteGuardsComponent"
+  },
+  {
+    "url": "preload",
+    "title": "Preload Data",
+    "component": "PreloadComponent"
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "url": "template",
+    "title": "Template Component",
+    "component": "TemplateComponent"
+  },
+  {
+    "url": "inline",
+    "title": "Inline Component",
+    "component": "InlineComponent"
+  },
+  {
+    "url": "expressions",
+    "title": "Expressions & Interpolation",
+    "component": "ExpressionsComponent"
+  },
+  {
+    "url": "directives",
+    "title": "Directives",
+    "component": "DirectivesComponent"
+  },
+  {
+    "url": "structdirectives",
+    "title": "Structural Directives",
+    "component": "StructDirectivesComponent"
+  },
+  {
+    "url": "binding",
+    "title": "Data Binding",
+    "component": "BindingComponent"
+  },
+  { "url": "pipes", "title": "Pipes", "component": "PipesComponent" },
+  {
+    "url": "localization",
+    "title": "Localization",
+    "component": "LocalizationComponent"
+  },
+  {
+    "url": "custompipes",
+    "title": "Custom Pipes",
+    "component": "CustomPipesComponent"
+  },
+  {
+    "url": "customdirectives",
+    "title": "Custom Directives",
+    "component": "CustomDirectivesComponent"
+  },
+  {
+    "url": "container",
+    "title": "Container Component",
+    "component": "ContainerComponent"
+  },
+  { "url": "repeater", "title": "Repeater", "component": "RepeaterComponent" },
+  {
+    "url": "projection",
+    "title": "Content Projection",
+    "component": "ContentProjectionComponent"
+  },
+  {
+    "url": "viewchild",
+    "title": "View Child",
+    "component": "ViewChildComponent"
+  }
+]

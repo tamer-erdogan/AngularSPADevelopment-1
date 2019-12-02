@@ -1,0 +1,18 @@
+[
+  {
+    "url": "stateful",
+    "title": "Stateful Service",
+    "component": "StatefulComponent"
+  },
+  {
+    "url": "simpleds",
+    "title": "Simple DataService",
+    "component": "SimpleDataStoreComponent"
+  },
+  { "url": "evtbus", "title": "Event Bus", "component": "EvtBusComponent" },
+  {
+    "url": "ngrx",
+    "title": "Simple NgRx",
+    "component": "VouchesContainerComponent"
+  }
+]

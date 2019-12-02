@@ -1,0 +1,16 @@
+@import "../../../../../theme/stylevars.scss";
+
+:host {
+  width: 100%;
+}
+
+.hoverclick {
+  cursor: pointer;
+  background-color: $medium-col;
+  color: white;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,23 @@
+@import "stylevars.scss";
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px 0;
+  padding: 20px;
+  border: 1px solid $medium-col;
+}
+
+.flex-item {
+  flex-grow: 1;
+  min-width: 200px;
+  height: 100px;
+  margin: 5px;
+  background: $medium-col;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}

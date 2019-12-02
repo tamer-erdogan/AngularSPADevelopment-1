@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Title</mat-card-title>
+    <mat-card-subtitle>Subtitle</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="row" fxFlexFill>
+      <mat-form-field fxFlex="1 1 auto">
+        <input matInput type="text" placeholder="Plz" />
+      </mat-form-field>
+      <mat-form-field fxFlex="1 1 auto">
+        <input matInput type="text" placeholder="City" />
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button (click)="(onAction1)">Action1</button>
+  </mat-card-actions>
+</mat-card>

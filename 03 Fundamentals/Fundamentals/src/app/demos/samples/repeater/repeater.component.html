@@ -1,0 +1,13 @@
+<mat-toolbar color="accent">
+  List of Employees - Nested
+</mat-toolbar>
+
+<div *ngFor="let p of persons">
+  <app-person-edit
+    [person]="p"
+    [editMode]="false"
+    (savePerson)="savePersonToDB($event)"
+    #personRef
+  ></app-person-edit>
+  <a mat-raised-button (click)="personRef.doDelete()">Delete Person</a>
+</div>

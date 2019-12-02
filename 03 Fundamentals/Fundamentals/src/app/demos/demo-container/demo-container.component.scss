@@ -1,0 +1,29 @@
+@import "stylevars.scss";
+
+.menu {
+  margin: 0 $smallGap;
+}
+
+.workbench {
+  min-width: $workbench;
+}
+
+button {
+  width: 100%;
+  margin: $smallGap 0;
+  @include link($medium-font, $light-col);
+}
+
+mat-toolbar {
+  height: $medium-toolbar;
+  margin-bottom: $bigGap;
+}
+
+.mat-sidenav-container {
+  height: 100%;
+}
+
+.mat-sidenav {
+  width: $side-nav;
+  background-color: $mediumBackground;
+}

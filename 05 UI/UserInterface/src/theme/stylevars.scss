@@ -1,0 +1,41 @@
+//Variables
+
+//Theme Colors
+$bg-pallete: 200;
+
+// Colors
+$medium-col: #bebebe;
+$light-col: #f5f5f5;
+$ngRed: red;
+
+// Gaps
+$small-gap: 0.5rem;
+$medium-gap: 0.8rem;
+$big-gap: 1rem;
+
+//Fonts
+$big-font: 1.3rem;
+$medium-font: 1.1rem;
+$small-font: 8rem;
+
+//Toolbars
+$big-toolbar: 70px;
+$medium-toolbar: 45px;
+
+//Mixins
+
+//Links
+@mixin link($col, $fontsize) {
+  font-size: $fontsize;
+  color: $col;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//Round Corners
+@mixin round() {
+  border-radius: 1rem;
+}

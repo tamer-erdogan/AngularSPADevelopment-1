@@ -1,0 +1,26 @@
+[
+  { "url": "types", "title": "Types & Arrays", "component": "TypesComponent" },
+  {
+    "url": "functions",
+    "title": "Functions",
+    "component": "FunctionsComponent"
+  },
+  {
+    "url": "objects",
+    "title": "Objects",
+    "component": "ObjectLiteralsComponent"
+  },
+  { "url": "classes", "title": "Classes", "component": "ClassesComponent" },
+  {
+    "url": "interfaces",
+    "title": "Interfaces",
+    "component": "InterfacesComponent"
+  },
+  { "url": "gernerics", "title": "Generics", "component": "GenericsComponent" },
+  { "url": "modules", "title": "Modules", "component": "ModulesComponent" },
+  {
+    "url": "services",
+    "title": "Async & Services",
+    "component": "ServicesComponent"
+  }
+]

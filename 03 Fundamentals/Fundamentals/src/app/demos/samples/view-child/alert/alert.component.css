@@ -1,0 +1,8 @@
+div {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(27, 27, 212);
+  background-color: lightblue;
+  margin: 0.3rem;
+  min-width: 200px;
+}

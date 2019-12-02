@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Currency Conversion using MatStepper und MatDialog</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content>
+    <mat-horizontal-stepper #stepper>
+      <mat-step>
+        <ng-template matStepLabel>Choose Amount</ng-template>
+        <mat-form-field>
+          <input
+            type="number"
+            matInput
+            [(ngModel)]="amount"
+            placeholder="How much do you want to Exchange"
+          />
+        </mat-form-field>
+        <div align="end"><button mat-button matStepperNext>Next</button></div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Convert</ng-template>
+        <div>You choose to convert {{ amount }} €</div>
+        <app-calculator
+          [amount]="amount"
+          (onConvert)="completeConvert($event)"
+        ></app-calculator>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div *ngIf="calculated">{{ msg }}</div>
+        <div align="end">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Localization</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    Person: {{ person.name }}, {{ person.age }}<br />
+    Salery: {{ person.salery | currency }}<br />
+    Salery with fixed Currency Symbol: {{ person.salery | currency: "EUR":true
+    }}<br />
+    Salery with fixed Currency Symbol: € {{ person.salery | number: "1.2-2"
+    }}<br />
+    DoB: {{ person.dateOfBirth | date: "longDate" }}<br />
+
+    <hr />
+    Add {{ val }} to app.module.ts - notice change
+  </mat-card-content>
+</mat-card>

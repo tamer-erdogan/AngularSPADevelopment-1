@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+mat-radio-button {
+  margin-left: 1rem;
+}
+
+mat-radio-group {
+  margin-bottom: 1rem;
+}

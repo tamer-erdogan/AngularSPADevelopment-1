@@ -1,0 +1,48 @@
+@import "stylevars";
+
+//Card
+
+.mat-card {
+  background-color: $light-col;
+  margin-bottom: $big-gap;
+  padding: 0 !important;
+}
+
+.mat-card-header {
+  background-color: $medium-col;
+  min-height: $medium-toolbar;
+  padding-top: $small-gap;
+}
+
+.mat-card-content {
+  padding: $medium-gap;
+  margin-bottom: 0 !important;
+}
+
+.mat-card-actions {
+  padding: $medium-gap;
+  margin-left: $medium-gap !important;
+  margin-right: $medium-gap !important;
+  padding-bottom: $medium-gap !important;
+  button {
+    background-color: mat-color($app-bg, 700);
+    color: mat-color($app-fg);
+  }
+}
+
+//Sidenav
+
+.mat-sidenav {
+  width: 220px;
+  background-color: mat-color($app-bg);
+}
+
+.mat-sidenav-container {
+  height: 100%;
+}
+
+// Buttons
+
+a.mat-raised-button {
+  margin-bottom: $small-gap;
+}

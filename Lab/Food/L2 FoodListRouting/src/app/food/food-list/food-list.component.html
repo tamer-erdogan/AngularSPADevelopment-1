@@ -1,0 +1,17 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of food">
+      <td>{{ p.name }}</td>
+      <td>{{ p.price }}</td>
+      <td>{{ p.calories }}</td>
+      <td><a (click)="selectFood(p)">Select</a></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<app-markdown-renderer [md]="'simplecomp'"></app-markdown-renderer>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Food Component - Click to remove</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let f of food" (click)="deleteFood(f)" class="hoverclick">
+      {{ f.name }}
+    </div>
+  </mat-card-content>
+</mat-card>

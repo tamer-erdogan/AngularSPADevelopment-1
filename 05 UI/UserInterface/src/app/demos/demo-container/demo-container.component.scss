@@ -1,0 +1,20 @@
+@import "stylevars.scss";
+
+.menu {
+  margin: 0 $small-gap;
+}
+
+.workbench {
+  min-width: 400px;
+}
+
+button {
+  width: 100%;
+  margin: $small-gap 0;
+  @include link($medium-font, $light-col);
+}
+
+mat-toolbar {
+  height: $medium-toolbar;
+  margin-bottom: $big-gap;
+}

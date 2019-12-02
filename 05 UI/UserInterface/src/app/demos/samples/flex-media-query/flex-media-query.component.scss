@@ -1,0 +1,39 @@
+article > * {
+  padding: 20px;
+  background-color: #cccccc;
+}
+article > div {
+  background-color: #dedede;
+}
+article footer {
+  background-color: #bbb;
+}
+
+/* Article Sample */
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  article {
+    flex-direction: row;
+  }
+
+  article > * {
+    flex: 1;
+  }
+
+  aside {
+    order: -1;
+  }
+
+  article > div {
+    flex: 3;
+  }
+
+  footer {
+    background-color: #ccc;
+  }
+}

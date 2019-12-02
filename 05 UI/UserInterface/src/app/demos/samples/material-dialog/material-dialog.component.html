@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Material Dialog with @Input()
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input
+        type="number"
+        matInput
+        [(ngModel)]="amount"
+        placeholder="How much do you want to Exchange"
+      />
+    </mat-form-field>
+    <button mat-raised-button (click)="openCalculator()">
+      Open Currency Calculator
+    </button>
+  </mat-card-content>
+</mat-card>

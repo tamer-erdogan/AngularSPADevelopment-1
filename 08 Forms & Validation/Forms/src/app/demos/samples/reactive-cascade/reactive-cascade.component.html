@@ -1,0 +1,129 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Skills Profile
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div [formGroup]="profileForm">
+      <ng-container>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            formControlName="firstNameInput"
+            placeholder="First Name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            formControlName="lastNameInput"
+            placeholder="Last Name"
+          />
+        </mat-form-field>
+      </ng-container>
+
+      <ng-container formArrayName="optionGroups">
+        <div
+          *ngFor="
+            let optionGroup of profileForm.controls['optionGroups'].controls;
+            let i = index
+          "
+          [formGroup]="optionGroup"
+        >
+          <h4>Skill {{ i + 1 }}</h4>
+          <div fxLayout="row nowrap" fxLayoutGap="10px">
+            <mat-form-field>
+              <mat-label for="select-input">Skilltype</mat-label>
+              <select matNativeControl formControlName="typename">
+                <option value="0" disabled selected>Select a skill type</option>
+                <option
+                  *ngFor="let select of selectValues"
+                  [value]="select.type"
+                  >{{ select.type }}</option
+                >
+              </select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label for="where-input">Skill</mat-label>
+              <select matNativeControl formControlName="skill">
+                <option value="0" disabled selected>Select a skill</option>
+                <option
+                  *ngFor="
+                    let where of getValuesForType(
+                      (profileForm.controls['optionGroups']?.value)[i]?.typename
+                    )
+                  "
+                  value="{{ where }}"
+                  >{{ where }}</option
+                >
+              </select>
+            </mat-form-field>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Skill Profile Result:
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <pre>{{ profileForm.value | json }}</pre>
+  </mat-card-content>
+</mat-card>
+
+<!-- <form [formGroup]="profileForm">
+  <h1>Profile Form</h1>
+
+  <div>
+    <label for="first-name-input">First Name</label>
+    <input type="text" id="first-name-input" formControlName="firstNameInput" />
+  </div>
+  <div>
+    <label for="last-name-input">Last Name</label>
+    <input type="text" id="last-name-input" formControlName="lastNameInput" />
+  </div>
+
+  <div formArrayName="optionGroups">
+    <div
+      *ngFor="
+        let optionGroup of profileForm.controls['optionGroups'].controls;
+        let i = index
+      "
+      [formGroup]="optionGroup"
+    >
+      <h4>Option {{ i + 1 }}</h4>
+      <div>
+        <label for="select-input">Criteria</label>
+        <select id="select-input" formControlName="selectInput">
+          <option value="0" disabled selected>Select a Criteria</option>
+          <option *ngFor="let select of selectValues" [value]="select.type">{{
+            select.type
+          }}</option>
+        </select>
+
+        <label for="where-input">Option</label>
+        <select id="where-input" formControlName="whereInput">
+          <option value="0" disabled selected>Select an Option</option>
+          <option
+            *ngFor="
+              let where of getCriteria(
+                (profileForm.controls['optionGroups']?.value)[i]?.selectInput
+              )
+            "
+            value="{{ where }}"
+            >{{ where }}</option
+          >
+        </select>
+      </div>
+    </div>
+  </div>
+</form> -->

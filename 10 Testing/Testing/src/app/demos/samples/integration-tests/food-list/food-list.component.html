@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Food List Component - Click to remove</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div
+      *ngFor="let f of food"
+      (click)="deleteFood(f)"
+      fxLayout="row"
+      fxLayoutGap="10px"
+    >
+      <app-food-row [food]="f" (delete)="deleteFood($event)"></app-food-row>
+    </div>
+  </mat-card-content>
+</mat-card>

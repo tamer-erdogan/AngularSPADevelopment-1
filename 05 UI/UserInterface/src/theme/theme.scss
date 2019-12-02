@@ -1,0 +1,18 @@
+//Provides Theme funcitonality
+@import '~@angular/material/theming';
+
+//Mixin for common styles
+@include mat-core();
+
+//Pick colors here: https://material.io/resources/color/
+$app-primary: mat-palette($mat-brown, 400);
+$app-accent: mat-palette($mat-grey, 400);
+$app-warn: mat-palette($mat-red);
+$app-fg: mat-palette($mat-red, 500);
+$app-bg: mat-palette($mat-grey, 100);
+
+//Build theme
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+//Include theme
+@include angular-material-theme($app-theme);

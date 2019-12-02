@@ -1,0 +1,20 @@
+@import "resets.scss";
+@import "theme.scss";
+@import "stylevars.scss";
+@import "mat-overrides.scss";
+@import "tables.scss";
+@import "forms.scss";
+
+.clickable {
+  cursor: pointer;
+}
+
+ul > li {
+  cursor: pointer;
+  list-style: none;
+  margin: 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

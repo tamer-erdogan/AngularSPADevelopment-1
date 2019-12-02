@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Person Card - initial</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Person: {{ person.name }}, {{ person.age }}<br />
+    Salary: {{ person.salary }}<br />
+    DoB: {{ person.dateOfBirth }}<br />
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Person Card - using Pipes</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Person: {{ person.name }}, {{ person.age }}<br />
+    Salary: {{ person.salary | currency }}<br />
+    DoB: {{ person.dateOfBirth | date: "longDate" }}<br />
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>JSON Pipe</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Without JSON pipe:</p>
+    <pre>{{ person }}</pre>
+    <p>With JSON pipe:</p>
+    <pre>{{ person | json }}</pre>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Slice Pipe</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li *ngFor="let i of persons | slice: 0:2">{{ i | json }}</li>
+    </ul>
+  </mat-card-content>
+</mat-card>

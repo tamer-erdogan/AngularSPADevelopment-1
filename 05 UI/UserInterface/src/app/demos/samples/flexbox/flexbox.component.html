@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Using Flexbox
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="flex-container">
+      <mat-card class="flex-item" *ngFor="let m of movies">
+        {{ m.title }}
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>

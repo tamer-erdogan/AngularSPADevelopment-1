@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Make sure API is running: VouchersAPI -> src folder -> dotnet watch
+      run</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content fxLayout="column">
+    <a mat-raised-button (click)="getVouchers()">Get Vouchers</a>
+    <a mat-raised-button (click)="getVoucher()">Get Voucher</a>
+    <a mat-raised-button (click)="insertVoucher()">Insert Voucher</a>
+    <a mat-raised-button (click)="updateVoucher()">Update Voucher</a>
+    <a mat-raised-button (click)="deleteVoucher()">Delete Voucher</a>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Result from {{ fname }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <pre>{{ result | json }}</pre>
+  </mat-card-content>
+</mat-card>

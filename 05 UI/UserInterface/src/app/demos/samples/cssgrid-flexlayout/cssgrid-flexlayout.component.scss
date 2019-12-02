@@ -1,0 +1,36 @@
+.sample {
+  min-height: 20vh;
+
+  div {
+    min-height: 3rem;
+    padding: 1rem;
+  }
+}
+
+.cardInner {
+  display: grid;
+  grid-template-areas: "header header" "side content" "footer footer";
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+}
+
+.header {
+  grid-area: header;
+  background-color: lavender;
+}
+
+.side {
+  grid-area: side;
+  background-color: greenyellow;
+}
+
+.content {
+  grid-area: content;
+  background-color: red;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: goldenrod;
+}

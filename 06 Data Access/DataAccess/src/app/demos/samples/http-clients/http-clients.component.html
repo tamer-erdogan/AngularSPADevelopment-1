@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Make sure API is running: VouchersAPI -> src folder -> dotnet watch
+      run</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content fxLayout="column">
+    <a mat-raised-button (click)="getVouchers()">Get Vouchers HttpClient</a>
+    <a mat-raised-button (click)="observeResponse()"
+      >Observe Response HttpClient</a
+    >
+    <a mat-raised-button (click)="usingHeadersHttpClient()"
+      >Using Headers in HttpClient</a
+    >
+    <a mat-raised-button (click)="usingInterceptor()">Using Interceptor</a>
+    <div class="info" *ngIf="fname == 'usingInterceptor()'">
+      Add Interceptor registration to app.module.ts
+      <div>
+        {{ reg }}
+      </div>
+      <br />
+      Watch Chrome Dev Tools for Bearer token
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Result</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <pre>{{ result | json }}</pre>
+  </mat-card-content>
+</mat-card>

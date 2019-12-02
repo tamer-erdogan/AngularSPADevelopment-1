@@ -1,0 +1,20 @@
+.navbar {
+  background-color: lightblue;
+  height: 10vh;
+}
+
+.sidemenu {
+  background-color: lightgray;
+  width: 20vw;
+}
+
+.home {
+  background-color: yellow;
+  width: 80vw;
+}
+
+.mainrow {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}

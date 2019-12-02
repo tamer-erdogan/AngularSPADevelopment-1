@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Classic View Model
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let v of vouchers">{{ v.ID }} - {{ v.Date }}</div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Using Stream
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let v of vouchers$ | async">{{ v.ID }} - {{ v.Date }}</div>
+  </mat-card-content>
+</mat-card>

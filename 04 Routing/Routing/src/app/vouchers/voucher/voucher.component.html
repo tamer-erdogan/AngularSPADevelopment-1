@@ -1,0 +1,94 @@
+<div fxLayout="column">
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <div fxFlex="70">
+        <span>Voucher Nr.: {{ voucher.ID }}</span>
+      </div>
+      <div fxFlex="30" class="rightCell">
+        <button routerLink="/vouchers" mat-button>Cancel / Back</button>
+        <button (click)="saveVoucher()" mat-button>Save</button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div
+    class="form"
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutAlign="center center"
+    fxFlexFill
+  >
+    <div fxFlex="20" fxFlexAlign="center">
+      <mat-radio-group class="form-radio-group" [(ngModel)]="voucher.Expense">
+        <mat-radio-button class="form-radio-button" [value]="true">
+          Expense
+        </mat-radio-button>
+        <mat-radio-button class="form-radio-button" [value]="false">
+          Income
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div fxFlex="35">
+      <mat-form-field class="form-default-width">
+        <input
+          matInput
+          [ngModel]="voucher.Text"
+          size="40"
+          type="text"
+          placeholder="Text:"
+        />
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="20">
+      <mat-form-field class="form-default-width">
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Choose a date"
+          [ngModel]="voucher.Date"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="15">
+      <mat-form-field class="form-default-width">
+        <input
+          matInput
+          [ngModel]="voucher.Amount"
+          size="40"
+          type="number"
+          placeholder="Amount:"
+        />
+      </mat-form-field>
+    </div>
+
+    <div fxFlex="10" fxFlexAlign="center">
+      <mat-slide-toggle [ngModel]="voucher?.Paid">Paid</mat-slide-toggle>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxFlexFill>
+    <app-voucher-details-list
+      [details]="voucher == undefined ? null : voucher.Details"
+      (detailSelected)="selectDetail($event)"
+      (detailAdd)="addDetail()"
+      (detailDeleted)="deleteDetail($event)"
+      fxFill
+    ></app-voucher-details-list>
+  </div>
+
+  <div *ngIf="currentDetail != undefined" fxLayout="row">
+    <app-voucher-detail
+      [detail]="currentDetail"
+      [accounts]="accounts"
+      (detailSaved)="saveDetail($event)"
+      fxFill
+    ></app-voucher-detail>
+  </div>
+</div>

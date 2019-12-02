@@ -1,0 +1,67 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Toggle to change view
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-slide-toggle [(ngModel)]="useFlexLayout"
+      >Use Flex Layout</mat-slide-toggle
+    >
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="!useFlexLayout">
+  <mat-card-header>
+    <mat-card-title>
+      Using CSS Grid
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="sample">
+    <div class="cardInner">
+      <div class="header">
+        Header
+      </div>
+      <div class="side">
+        Side
+      </div>
+      <div class="content">
+        Content
+      </div>
+      <div class="footer">
+        Footer
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="sample" *ngIf="useFlexLayout">
+  <mat-card-header>
+    <mat-card-title>
+      Using CSS Grid & Angular Flex Layout
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div
+      gdAreas="header header | side content | footer footer"
+      gdAreas.lt-md="header | side | content | footer"
+      gdGap="16px"
+      gdRows="auto auto auto"
+      gdRows.lt-md="auto auto auto auto"
+      class="sample"
+    >
+      <div gdArea="header" style="background-color: green">
+        Header
+      </div>
+      <div gdArea="side" style="background-color: yellow">
+        Side
+      </div>
+      <div gdArea="content" style="background-color: pink">
+        Content
+      </div>
+      <div gdArea="footer" style="background-color: lightblue">
+        Footer
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

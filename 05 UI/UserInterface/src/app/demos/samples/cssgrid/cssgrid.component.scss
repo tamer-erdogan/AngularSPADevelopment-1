@@ -1,0 +1,33 @@
+.csscontainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  // grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  /* grid-auto-rows:100px; */
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.csscontainer > div {
+  background: lawngreen;
+  padding: 1em;
+}
+
+.csscontainer > div:nth-child(odd) {
+  background: darkgoldenrod;
+}
+
+.subbox {
+  grid-row: 1/3;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.subbox > div {
+  background: lavender;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+mat-card {
+  padding: 1rem !important;
+}

@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>ngStyle</mat-card-title>
+  </mat-card-header>
+
+  <a mat-raised-button (click)="changeColor()"
+    >Change Color using ngStyle and prop (bgcolor)</a
+  >
+  <div
+    [ngStyle]="{
+      'margin-top': '10px',
+      color: 'white',
+      'background-color': bgcolor
+    }"
+  >
+    {{ msg }}
+  </div>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>ngClass</mat-card-title>
+  </mat-card-header>
+  <a mat-raised-button (click)="changeClass()"
+    >Change CSS Class using ngClass and method</a
+  >
+  <div [ngClass]="getClass()"></div>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Prop Binding</mat-card-title>
+  </mat-card-header>
+  <a mat-raised-button (click)="toggleInput()">Click to enable the input</a
+  ><br />
+  <a mat-raised-button (click)="hideInput()">Click to hide the input</a>
+  <input
+    type="text"
+    [disabled]="isDisabled"
+    [hidden]="isHidden"
+    placeholder="Enter name"
+  />
+</mat-card>

@@ -1,0 +1,33 @@
+$mediumBackground: #eeeeee;
+$light-col: whitesmoke;
+
+$ngRed: red;
+$matGreen: #a5d6a7;
+
+$side-nav: 230px;
+$workbench: 400px;
+
+// $Gap: 10px;
+$smallGap: 0.5rem;
+$mediumGap: 0.8rem;
+$bigGap: 1rem;
+
+//Fonts
+$big-font: 1.3rem;
+$medium-font: 1.1rem;
+
+//Nav
+$big-toolbar: 70px;
+$medium-toolbar: 45px;
+
+//Links
+
+@mixin link($col, $font) {
+  font-size: $font;
+  color: $col;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

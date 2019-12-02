@@ -1,0 +1,25 @@
+.dragCol {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dragRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  cursor: pointer;
+  background-color: tomato;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.drop-item {
+  cursor: pointer;
+  background-color: lavender;
+  margin: 1rem;
+  padding: 0.5rem;
+}

@@ -1,0 +1,133 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Simple Person Card - One way binding</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div>
+      <img
+        *ngIf="selectedPerson.imgUrl"
+        [src]="selectedPerson.imgUrl"
+        width="120px"
+      />
+    </div>
+    <div>Person: {{ selectedPerson.name }}, {{ selectedPerson.age }}</div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title
+      >Binding Nullable Types - {{ latePerson?.name }} Arriving
+      Late</mat-card-title
+    >
+  </mat-card-header>
+
+  <mat-card-content>
+    <div *ngIf="latePerson">
+      <pre>{{ latePerson | json }}</pre>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Show and hide - Prop Binding - click buttons
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <button mat-raised-button (click)="toggleDisplay()">Toggle</button>
+
+    <div class="wrapper">
+      <span [style.visibility]="hide ? 'hidden' : 'visible'">Msg 1</span>
+      <span [style.visibility]="!hide ? 'hidden' : 'visible'">Msg 2</span>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Bindings - Try change text
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content fxLayout="column">
+    <mat-form-field>
+      <label for="lblOneWay">One Way Property Binding</label> <br />
+      <input
+        matInput
+        id="lblOneWay"
+        type="text"
+        [value]="selectedPerson.name"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <label for="lblOneWayModel">One Way (Model) Binding</label> <br />
+      <input
+        matInput
+        type="text"
+        id="lblOneWayModel"
+        [ngModel]="selectedPerson.name"
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <label for="lblTwoWay">Two Way (Model) Binding</label> <br />
+      <input
+        matInput
+        type="text"
+        id="lblTwoWay"
+        [(ngModel)]="selectedPerson.name"
+      />
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Bindings Radio Button Groups
+    </mat-card-title>
+  </mat-card-header>
+  <input
+    type="radio"
+    name="gender"
+    [(ngModel)]="selectedPerson.gender"
+    value="male"
+  />
+  Male
+  <input
+    type="radio"
+    name="gender"
+    [(ngModel)]="selectedPerson.gender"
+    value="female"
+  />
+  Female <br />
+  {{ selectedPerson.name }} is {{ selectedPerson.gender }}
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Bindings Select
+    </mat-card-title>
+  </mat-card-header>
+  <select [(ngModel)]="selectedPerson">
+    <option *ngFor="let p of persons" [ngValue]="p">{{ p.name }}</option>
+  </select>
+  <br />
+  You selected: {{ selectedPerson.name }}
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Bindings Checkboxes
+    </mat-card-title>
+  </mat-card-header>
+  <input type="checkbox" [(ngModel)]="isActive" /> <br />
+  Current State: {{ isActive }}
+</mat-card>

@@ -1,0 +1,62 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Resize window and watch change - Inspect Tags on mat-card in *.html
+    </mat-card-title>
+  </mat-card-header>
+</mat-card>
+
+<mat-card>
+  <mat-card-header
+    fxLayout="row"
+    fxLayout.lt-md="column"
+    fxLayoutAlign.lt-md="center center"
+  >
+    <mat-card-title>Angular Flex Layout</mat-card-title>
+    <mat-card-subtitle
+      >Notice the change of the image on mobile</mat-card-subtitle
+    >
+    <img mat-card-avatar *ngIf="current.imgUrl" [src]="current.imgUrl" />
+  </mat-card-header>
+  <mat-card-content>
+    <form fxLayout="column">
+      <div
+        class="input-row"
+        fxLayout="row"
+        fxLayout.lt-md="column"
+        fxLayoutGap="20px"
+        fxLayoutGap.lt-md="0px"
+      >
+        <mat-form-field fxFlex>
+          <input
+            matInput
+            type="text"
+            name="name"
+            placeholder="FIRSTNAME"
+            [value]="current.name"
+          />
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+          <input
+            matInput
+            type="text"
+            placeholder="LASTNAME"
+            [value]="current.lastname"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="input-row">
+        <mat-form-field fxFlex>
+          <input
+            matInput
+            type="text"
+            placeholder="EMAIL"
+            [value]="current.email"
+          />
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

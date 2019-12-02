@@ -1,0 +1,52 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Checked Pipe
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <label>Is Checked:</label> <input type="checkbox" [(ngModel)]="isChecked" />
+    <hr />
+    <span>Is selected: </span><span [innerHTML]="isChecked | toChecked"></span>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Cust Currency Pipe
+    </mat-card-title>
+  </mat-card-header>
+  <label>Price: {{ price | toEuro }} </label>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Table
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <label style="width: 5%;">Filter:</label>
+    <input type="text" [(ngModel)]="currentFilter" style="width: 94%;" />
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Text</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let v of vouchers | VoucherFilter: currentFilter:'Text'"
+          (click)="showVoucher(v.ID)"
+        >
+          <td>{{ v.ID }}</td>
+          <td>{{ v.Text }}</td>
+          <td><a [routerLink]="['/vouchers', v.ID]">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>

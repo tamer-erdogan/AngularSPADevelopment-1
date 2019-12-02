@@ -1,0 +1,42 @@
+[
+  {
+    "url": "templatedriven",
+    "title": "Template driven Forms",
+    "component": "TemplateDrivenComponent"
+  },
+  {
+    "url": "templatevalidation",
+    "title": "Template Validation",
+    "component": "TemplateValidationComponent"
+  },
+  {
+    "url": "reactiveforms",
+    "title": "Reactive Forms",
+    "component": "ReativeFormsComponent"
+  },
+  {
+    "url": "formsbuilder",
+    "title": "Reactive FormsBuilder",
+    "component": "FormsBuilderComponent"
+  },
+  {
+    "url": "reactivevalidation",
+    "title": "Reactive Validation",
+    "component": "ReativeValidationComponent"
+  },
+  {
+    "url": "formcontrol",
+    "title": "Form Control Features",
+    "component": "FormControlComponent"
+  },
+  {
+    "url": "formarray",
+    "title": "Form Array",
+    "component": "FormArrayComponent"
+  },
+  {
+    "url": "cascade",
+    "title": "Cascade",
+    "component": "ReactiveCascadeComponent"
+  }
+]

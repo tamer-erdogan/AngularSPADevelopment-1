@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span #title>Choose Brand Colors:</span>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-raised-button (click)="setTitle()">Set Title</button>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Component: See console for output
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content fxLayout="row wrap" fxFill>
+    <app-alert fxFlex="1 2 auto"></app-alert>
+    <app-alert fxFlex="1 2 auto"></app-alert>
+    <app-alert fxFlex="1 2 auto"></app-alert>
+    <app-alert type="danger" fxFlex="1 2 auto"></app-alert>
+    <app-alert fxFlex="1 2 auto"></app-alert>
+    <app-alert type="info" fxFlex="1 2 auto"></app-alert>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Divs: See console for output
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content #parentEl fxLayout="row wrap" (window:resize)="doFlex()">
+    <div #div class="sample">a</div>
+    <div #div class="sample">b</div>
+    <div #div class="sample">c</div>
+  </mat-card-content>
+</mat-card>
