@@ -1,5 +1,7 @@
 # Angular Basics
 
+[Node Version Manager for Windows](https://github.com/coreybutler/nvm-windows)
+
 [Angular CLI Reference](https://angular.io/cli)
 
 [Angular Augury](https://augury.rangle.io/)
