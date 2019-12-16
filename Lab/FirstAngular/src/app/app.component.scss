@@ -1,0 +1,26 @@
+.container {
+  background-color: lightsteelblue;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: lightblue;
+  height: 10vh;
+}
+
+.maincontainer {
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+
+.sidebar {
+  background-color: lightgrey;
+  min-width: 200px;
+}
+
+.main {
+  background-color: lightsalmon;
+  flex-grow: 2;
+}
