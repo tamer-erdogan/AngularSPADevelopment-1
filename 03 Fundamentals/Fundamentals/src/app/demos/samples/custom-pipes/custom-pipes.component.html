@@ -38,13 +38,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr
-          *ngFor="let v of vouchers | VoucherFilter: currentFilter:'Text'"
-          (click)="showVoucher(v.ID)"
-        >
+        <tr *ngFor="let v of vouchers | VoucherFilter: currentFilter:'Text'">
           <td>{{ v.ID }}</td>
           <td>{{ v.Text }}</td>
-          <td><a [routerLink]="['/vouchers', v.ID]">Edit</a></td>
+          <td><a>Edit</a></td>
         </tr>
       </tbody>
     </table>
