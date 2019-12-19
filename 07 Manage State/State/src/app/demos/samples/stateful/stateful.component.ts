@@ -10,7 +10,6 @@ import { Voucher } from "../model";
   providers: [StatefulVoucherService]
 })
 export class StatefulComponent implements OnInit {
-  vouchers: Voucher[];
   dataSource: MatTableDataSource<Voucher>;
   displayedColumns = ["ID", "Text", "Date", "Amount"];
 

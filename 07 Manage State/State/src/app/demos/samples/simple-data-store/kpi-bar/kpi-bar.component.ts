@@ -10,15 +10,16 @@ import { Observable } from "rxjs";
   styleUrls: ["./kpi-bar.component.scss"]
 })
 export class KpiBarComponent implements OnInit {
-  runningSum$: Observable<number>;
+  runningSum$ = this.dataStore
+    .getAllVouchers()
+    .pipe(map(vs => vs.reduce((runningSum, v) => runningSum + v.Amount, 0)));
 
   constructor(private dataStore: DataStoreService) {}
 
   ngOnInit() {
-    this.runningSum$ = this.dataStore
-      .getAllVouchers()
-      .pipe(map(vs => vs.reduce((runningSum, v) => runningSum + v.Amount, 0)));
-
+    // this.runningSum$ = this.dataStore
+    //   .getAllVouchers()
+    //   .pipe(map(vs => vs.reduce((runningSum, v) => runningSum + v.Amount, 0)));
     // JS Code
     // this.dataStore.getAllVouchers().subscribe((vouchers: Voucher[]) => {
     //   this.runningSum = 0;
