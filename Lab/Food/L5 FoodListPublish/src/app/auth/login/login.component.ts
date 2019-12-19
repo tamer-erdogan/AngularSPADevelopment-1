@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FBAuthService } from "../firebase-auth.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -8,7 +9,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private as: FBAuthService) {}
+  constructor(private as: FBAuthService, private router: Router) {}
 
   loginForm: FormGroup;
 
@@ -23,6 +24,8 @@ export class LoginComponent implements OnInit {
   }
 
   logIn(form: FormGroup) {
-    this.as.logOn(form.value);
+    this.as
+      .logOn(form.value.email, form.value.password)
+      .then(() => this.router.navigate(["/food"]));
   }
 }

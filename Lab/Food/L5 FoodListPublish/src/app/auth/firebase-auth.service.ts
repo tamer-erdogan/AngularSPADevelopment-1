@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable, of } from "rxjs";
 import { AngularFireAuth } from "@angular/fire/auth";
-import { LoginCredentials } from "./credential.model";
 import * as firebase from "firebase";
+
 @Injectable({
   providedIn: "root"
 })
@@ -66,14 +66,17 @@ export class FBAuthService {
     });
   }
 
-  logOn(loginvm: LoginCredentials): Promise<firebase.auth.UserCredential> {
+  logOn(
+    email: string,
+    password: string
+  ): Promise<firebase.auth.UserCredential> {
     return new Promise<firebase.auth.UserCredential>((resolve, reject) => {
       firebase
         .auth()
         .setPersistence(this.persistence)
         .then(() => {
           this.fireAuth.auth
-            .signInWithEmailAndPassword(loginvm.email, loginvm.pwd)
+            .signInWithEmailAndPassword(email, password)
             .then(cred => resolve(cred))
             .catch(err => {
               console.log("Error logging in", err);
