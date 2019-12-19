@@ -3,10 +3,8 @@ import { MatTableDataSource } from "@angular/material";
 import { Store } from "@ngrx/store";
 
 import { Voucher } from "../../model";
-import {
-  DemosState,
-  getAllVouchers
-} from "src/app/demos/store/reducers/demos.reducer";
+import { DemosState } from "src/app/demos/store/reducers/demos.reducer";
+import { getAllVouchers } from "src/app/demos/store/selectors/demos.selector";
 
 @Component({
   selector: "app-ngrx-vouchers",

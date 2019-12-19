@@ -7,8 +7,8 @@ import {
 } from "@ngrx/store";
 import { environment } from "../../../environments/environment";
 import {
-  DemoReducer,
-  DemosState
+  DemosState,
+  DemoReducer
 } from "src/app/demos/store/reducers/demos.reducer";
 
 export interface State {

@@ -1,6 +1,5 @@
-import { VouchersActionTypes, VouchersActions } from "../actions/demos.actions";
 import { Voucher } from "../../samples/model";
-import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { VouchersActions, VouchersActionTypes } from "../actions/demos.actions";
 
 //Feature Key
 
@@ -10,10 +9,6 @@ export const demosFeatureKey = "demos";
 
 export interface DemosState {
   vouchers: Voucher[];
-}
-
-export interface DemosFeatureState {
-  demos: DemosState;
 }
 
 export const initialState: DemosState = {
@@ -40,26 +35,6 @@ export const initialState: DemosState = {
     }
   ]
 };
-
-//Slices
-
-// export const getVouchers = (state: DemosState) => state.vouchers;
-
-//Selectors
-
-export const getDemosFeature = createFeatureSelector<DemosFeatureState>(
-  demosFeatureKey
-);
-
-export const getDemosState = createSelector(
-  getDemosFeature,
-  (state: DemosFeatureState) => state.demos
-);
-
-export const getAllVouchers = createSelector(
-  getDemosState,
-  (state: DemosState) => state.vouchers
-);
 
 //Reducer
 export function DemoReducer(state = initialState, action: VouchersActions) {
