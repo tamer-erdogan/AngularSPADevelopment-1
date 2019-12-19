@@ -18,6 +18,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { LoginComponent } from "./auth/login/login.component";
+import { RegisterComponent } from "./auth/register/register.component";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
     FoodListComponent,
     FoodEditComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,18 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { LoginCredentials } from './loginCred';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject, Observable, of } from "rxjs";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { LoginCredentials } from "./credential.model";
+import * as firebase from "firebase";
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class FBAuthService {
   constructor(private fireAuth: AngularFireAuth) {
     this.onUserChanged();
   }
 
-  private Token: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private persistence = firebase.auth.Auth.Persistence.NONE;
+  private Token: BehaviorSubject<string> = new BehaviorSubject<string>("");
 
   private fbUser: firebase.User = null;
   public User: BehaviorSubject<firebase.User> = new BehaviorSubject(
@@ -48,21 +50,37 @@ export class FBAuthService {
     email: string,
     password: string
   ): Promise<firebase.auth.UserCredential> {
-    return this.fireAuth.auth
-      .createUserWithEmailAndPassword(email, password)
-      .catch(err => {
-        console.log('Error logging in', err);
-        return err;
-      });
+    return new Promise<firebase.auth.UserCredential>((resolve, reject) => {
+      firebase
+        .auth()
+        .setPersistence(this.persistence)
+        .then(() => {
+          this.fireAuth.auth
+            .createUserWithEmailAndPassword(email, password)
+            .then(cred => resolve(cred))
+            .catch(err => {
+              console.log("Error logging in", err);
+              reject(err);
+            });
+        });
+    });
   }
 
   logOn(loginvm: LoginCredentials): Promise<firebase.auth.UserCredential> {
-    return this.fireAuth.auth
-      .signInWithEmailAndPassword(loginvm.email, loginvm.pwd)
-      .catch(err => {
-        console.log('Error logging in', err);
-        return err;
-      });
+    return new Promise<firebase.auth.UserCredential>((resolve, reject) => {
+      firebase
+        .auth()
+        .setPersistence(this.persistence)
+        .then(() => {
+          this.fireAuth.auth
+            .signInWithEmailAndPassword(loginvm.email, loginvm.pwd)
+            .then(cred => resolve(cred))
+            .catch(err => {
+              console.log("Error logging in", err);
+              reject(err);
+            });
+        });
+    });
   }
 
   logOff() {
@@ -71,6 +89,6 @@ export class FBAuthService {
       .then(() => {
         this.fbUser = null;
       })
-      .catch(err => console.log('Error logging out', err));
+      .catch(err => console.log("Error logging out", err));
   }
 }

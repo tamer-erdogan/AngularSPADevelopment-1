@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FBAuthService } from "../firebase-auth.service";
-import { LoginCredentials } from "../loginCred";
+import { LoginCredentials } from "../credential.model";
 import {
   FormGroup,
   FormControl,
