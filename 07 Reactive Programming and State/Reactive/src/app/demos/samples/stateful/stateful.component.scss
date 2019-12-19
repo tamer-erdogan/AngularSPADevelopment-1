@@ -1,0 +1,10 @@
+@import "stylevars.scss";
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-row:hover {
+  background-color: $medium-col;
+  cursor: pointer;
+}
