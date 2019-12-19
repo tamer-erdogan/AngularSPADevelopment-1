@@ -1,0 +1,15 @@
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
+})
+export class AppComponent {
+  title = "FirstAngular";
+
+  //TODO: thias and that
+  constructor() {
+    console.log("abcd");
+  }
+}

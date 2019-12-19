@@ -55,8 +55,10 @@ export class VoucherComponent implements OnInit {
   }
 
   readResolverObs() {
-    this.route.data.subscribe(data => (this.voucher = data["voucher"]));
-    this.setDetail(this.voucher);
+    this.route.data.subscribe(data => {
+      this.voucher = data["voucherData"];
+      this.setDetail(this.voucher);
+    });
   }
 
   setDetail(v: Voucher) {

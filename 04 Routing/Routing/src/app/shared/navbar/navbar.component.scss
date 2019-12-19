@@ -9,6 +9,10 @@
   @include link($medium-font, $light-col);
 }
 
+.navLink-active {
+  text-decoration: underline;
+}
+
 mat-toolbar-row {
   min-height: $big-toolbar;
 }
