@@ -15,6 +15,11 @@
     "component": "CreatingObservableComponent"
   },
   {
+    "url": "operators",
+    "title": "Observable Operators",
+    "component": "OperatorsComponent"
+  },
+  {
     "url": "subjects",
     "title": "Subjects",
     "component": "SubjectsComponent"
@@ -28,11 +33,6 @@
     "url": "flexlayoutapi",
     "title": "Flex Layout Api",
     "component": "FlexLayoutApiComponent"
-  },
-  {
-    "url": "operators",
-    "title": "Observable Operators",
-    "component": "OperatorsComponent"
   },
   {
     "url": "unsubscribe",
