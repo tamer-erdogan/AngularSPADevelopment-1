@@ -1,5 +1,9 @@
-<mat-card fxLayout="row" fxLayoutGap="10px">
-  <mat-card-content>
+<mat-card>
+  <mat-card-content
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="10px"
+  >
     <mat-form-field>
       <input
         matInput
@@ -7,8 +11,9 @@
         placeholder="Filter"
       />
     </mat-form-field>
+
     <button mat-raised-button (click)="addFood()">
-      <mat-icon>add_circle</mat-icon>
+      <mat-icon>add_circle</mat-icon><span>Add item</span>
     </button>
   </mat-card-content>
 </mat-card>

@@ -7,14 +7,14 @@
       <mat-form-field>
         <input matInput type="text" placeholder="Name" formControlName="name" />
       </mat-form-field>
-      <em
+      <mat-error
         *ngIf="
           form.controls['name'].touched &&
           form.controls['name'].errors != undefined
         "
       >
         Name is required & must be more than 3 chars
-      </em>
+      </mat-error>
       <mat-form-field>
         <input
           matInput
@@ -23,14 +23,14 @@
           formControlName="price"
         />
       </mat-form-field>
-      <em
+      <mat-error
         *ngIf="
           form.controls['price'].touched &&
           form.controls['price'].errors != undefined
         "
       >
         Price must be greater than 1€
-      </em>
+      </mat-error>
       <mat-form-field>
         <input
           matInput

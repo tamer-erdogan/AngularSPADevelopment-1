@@ -14,6 +14,7 @@ import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MaterialModule } from "./material.module";
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
