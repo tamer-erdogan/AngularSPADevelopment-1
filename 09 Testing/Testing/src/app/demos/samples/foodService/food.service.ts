@@ -8,14 +8,18 @@ import { FoodItem } from "./../model/food-item.model";
 })
 export class FoodService {
   constructor(private httpClient: HttpClient) {
+    this.loadData();
+  }
+
+  private items: FoodItem[] = [];
+  private Items: BehaviorSubject<FoodItem[]> = new BehaviorSubject(this.items);
+
+  private loadData() {
     this.httpClient.get<FoodItem[]>("/assets/food.json").subscribe(data => {
       this.items = data;
       this.Items.next(this.items);
     });
   }
-
-  private items: FoodItem[] = [];
-  private Items: BehaviorSubject<FoodItem[]> = new BehaviorSubject(this.items);
 
   getItems(): Observable<FoodItem[]> {
     return this.Items;

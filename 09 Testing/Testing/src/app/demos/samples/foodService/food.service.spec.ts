@@ -15,7 +15,7 @@ describe("FoodService", () => {
     service = TestBed.get(FoodService);
   });
 
-  it("should create a post in an array", done => {
+  it("should create food in an array", done => {
     const item: FoodItem = { name: "Gulasch", rating: 2 };
     service.addItem(item);
     service.getItems().subscribe(data => {
@@ -46,14 +46,6 @@ describe("FoodService", () => {
       expect(data.length).toEqual(1);
       done();
     });
-  });
-
-  it("should return the correct items after delete", done => {
-    const g: FoodItem = { name: "Gulasch", rating: 2 };
-    service.addItem(g);
-    const f: FoodItem = { name: "Panierter Kabeljau", rating: 3 };
-    service.addItem(f);
-    service.deleteItem(g);
 
     service.getItems().subscribe(data => {
       expect(data).toEqual([{ name: "Panierter Kabeljau", rating: 3 }]);
