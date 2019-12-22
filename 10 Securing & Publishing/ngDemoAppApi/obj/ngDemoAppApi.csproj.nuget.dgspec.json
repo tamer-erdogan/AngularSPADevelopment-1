@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Classes\\AngularSPADevelopment\\10 Securing & Pbulishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {}
+    "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {}
   },
   "projects": {
-    "H:\\Classes\\AngularSPADevelopment\\10 Securing & Pbulishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {
+    "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Pbulishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
+        "projectUniqueName": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
         "projectName": "ngDemoAppApi",
-        "projectPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Pbulishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
+        "projectPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Pbulishing\\ngDemoAppApi\\obj\\",
+        "outputPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,21 +41,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.ApplicationInsights.AspNetCore": {
-              "target": "Package",
-              "version": "[2.12.0, )"
-            },
-            "Microsoft.AspNetCore": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Authentication.Cookies": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",
-              "version": "[2.1.2, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
@@ -65,25 +53,13 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
-            "Microsoft.AspNetCore.Authentication.OAuth": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
-            "Microsoft.AspNetCore.Diagnostics": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.0, )"
-            },
-            "Microsoft.AspNetCore.Identity": {
-              "target": "Package",
-              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
