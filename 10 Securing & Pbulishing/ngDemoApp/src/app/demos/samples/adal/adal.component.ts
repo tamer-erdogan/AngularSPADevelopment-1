@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { RecentFile } from "./model";
-import { O365Service } from "./o365.service";
+import { RecentFile } from "./graph.model";
+import { ADALService } from "./adal.service";
 import { environment } from "src/environments/environment";
-import { ADALToken } from "./const";
 
 @Component({
   selector: "app-adal",
@@ -10,7 +9,7 @@ import { ADALToken } from "./const";
   styleUrls: ["./adal.component.scss"]
 })
 export class AdalComponent implements OnInit {
-  constructor(private service: O365Service) {}
+  constructor(private service: ADALService) {}
 
   ngOnInit() {}
 

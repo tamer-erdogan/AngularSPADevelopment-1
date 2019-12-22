@@ -8,8 +8,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FirebaseComponent } from "./samples/firebase/firebase.component";
 import { AdalComponent } from "./samples/adal/adal.component";
-import { LoginComponent } from "./samples/auth/login/login.component";
-import { RegisterComponent } from "./samples/auth/register/register.component";
+import { AzureADComponent } from "./samples/azure-ad/azure-ad.component";
+import { LoginComponent } from "./samples/firebase/components/login/login.component";
+import { RegisterComponent } from "./samples/firebase/components/register/register.component";
 
 const demoRoutes: Routes = [
   {
@@ -29,7 +30,8 @@ const demoRoutes: Routes = [
     FirebaseComponent,
     AdalComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AzureADComponent
   ],
   imports: [
     CommonModule,

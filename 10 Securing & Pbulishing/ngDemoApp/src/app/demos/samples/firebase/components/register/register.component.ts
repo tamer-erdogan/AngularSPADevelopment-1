@@ -1,12 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import { FirebaseAuthService } from "../../firebase/firebase-auth.service";
-import { LoginCredentials } from "../../firebase/credential.model";
 import {
   FormGroup,
   FormControl,
   Validators,
   AbstractControl
 } from "@angular/forms";
+import { FirebaseAuthService } from "../../firebase-auth.service";
 
 @Component({
   selector: "app-register",

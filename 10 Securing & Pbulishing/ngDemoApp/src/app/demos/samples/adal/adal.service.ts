@@ -2,12 +2,11 @@ import { Injectable } from "@angular/core";
 import { MsAdalAngular6Service } from "microsoft-adal-angular6";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
-import { ADALToken } from "./const";
 
 @Injectable({
   providedIn: "root"
 })
-export class O365Service {
+export class ADALService {
   constructor(
     private adalSvc: MsAdalAngular6Service,
     private httpClient: HttpClient
@@ -16,6 +15,7 @@ export class O365Service {
   }
 
   user: any;
+  adalToken = "adelToken";
 
   logIn() {
     this.adalSvc.login();
@@ -23,12 +23,12 @@ export class O365Service {
 
   logOut() {
     this.adalSvc.logout();
-    localStorage.setItem(ADALToken, null);
+    localStorage.setItem(this.adalToken, null);
   }
 
   query(endpoint: any, query: string, callback) {
     this.adalSvc.acquireToken("graphApiUri").subscribe((token: string) => {
-      localStorage.setItem(ADALToken, token);
+      localStorage.setItem(this.adalToken, token);
 
       this.httpClient
         .get(`${endpoint}${query}`)
@@ -38,7 +38,7 @@ export class O365Service {
 
   createEvent(item, cal) {
     this.adalSvc.acquireToken("graphApiUri").subscribe((token: string) => {
-      localStorage.setItem(ADALToken, token);
+      localStorage.setItem(this.adalToken, token);
 
       let opts = {
         headers: {

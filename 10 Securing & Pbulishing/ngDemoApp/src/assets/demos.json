@@ -1,17 +1,17 @@
 [
   {
-    "url": "winauth",
-    "title": "Windows Auth",
-    "component": "WinAuthComponent"
-  },
-  {
     "url": "firebase",
     "title": "Firebase Auth ",
     "component": "FirebaseComponent"
   },
   {
-    "url": "adal",
-    "title": "Azure AD Auth",
+    "url": "msal",
+    "title": "Azure AD Auth - MSAL",
+    "component": "AzureADComponent"
+  },
+  {
+    "url": "msal",
+    "title": "Azure AD Auth - ADAL",
     "component": "AdalComponent"
   }
 ]
