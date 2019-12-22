@@ -30,8 +30,15 @@ export class ADALService {
     this.adalSvc.acquireToken("graphApiUri").subscribe((token: string) => {
       localStorage.setItem(this.adalToken, token);
 
+      let header = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/json"
+        }
+      };
+
       this.httpClient
-        .get(`${endpoint}${query}`)
+        .get(`${endpoint}${query}`, header)
         .subscribe(data => callback(data));
     });
   }
@@ -40,14 +47,15 @@ export class ADALService {
     this.adalSvc.acquireToken("graphApiUri").subscribe((token: string) => {
       localStorage.setItem(this.adalToken, token);
 
-      let opts = {
+      let header = {
         headers: {
           Authorization: `Bearer ${token}`,
           Accept: "application/json"
         }
       };
+
       this.httpClient
-        .post(`${environment.o365Config.endpoints.graphApiUri}${cal}`, opts)
+        .post(`${environment.o365Config.endpoints.graphApiUri}${cal}`, header)
         .subscribe(data => console.log(data));
     });
   }

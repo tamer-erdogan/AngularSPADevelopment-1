@@ -19,7 +19,8 @@ const demoRoutes: Routes = [
 
     children: [
       { path: "firebase", component: FirebaseComponent },
-      { path: "adal", component: AdalComponent }
+      { path: "adal", component: AdalComponent },
+      { path: "msal", component: AzureADComponent }
     ]
   }
 ];

@@ -10,7 +10,7 @@
     "component": "AzureADComponent"
   },
   {
-    "url": "msal",
+    "url": "adal",
     "title": "Azure AD Auth - ADAL",
     "component": "AdalComponent"
   }

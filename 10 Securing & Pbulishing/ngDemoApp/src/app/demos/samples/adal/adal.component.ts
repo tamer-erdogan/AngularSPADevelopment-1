@@ -17,14 +17,14 @@ export class AdalComponent implements OnInit {
     Subject: "A Graph Event",
     Body: {
       ContentType: "HTML",
-      Content: "The Super Fancy MS Graph Event"
+      Content: "The Super Fancy Angular MS Graph Event"
     },
     Start: {
-      DateTime: "2019-04-02T00:00:00",
+      DateTime: "2020-04-02T00:00:00",
       TimeZone: "UTC"
     },
     End: {
-      DateTime: "2019-04-02T23:00:00",
+      DateTime: "2020-04-02T23:00:00",
       TimeZone: "UTC"
     }
   };
