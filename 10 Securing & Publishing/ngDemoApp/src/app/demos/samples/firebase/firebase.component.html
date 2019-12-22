@@ -1,0 +1,22 @@
+<div *ngIf="currentUser == null">
+  <app-login></app-login>
+  <app-register></app-register>
+</div>
+
+<mat-card *ngIf="currentUser != null" fxLayout="column" fxLayoutGap="10px">
+  <mat-card-header>
+    <mat-card-title
+      >You are Authenticated by Firebase as:
+      {{ currentUser?.email }}</mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content fxLayout="column" fxLayoutGap="16px">
+    <button mat-raised-button (click)="logOut()" color="primary">
+      Log Off
+    </button>
+    <button mat-raised-button (click)="callCoreApi()" color="primary">
+      Call Secured .NET Core Api
+    </button>
+    <pre>{{ resp | json }}</pre>
+  </mat-card-content>
+</mat-card>
