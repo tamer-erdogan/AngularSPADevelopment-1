@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { RecentFile } from "./graph.model";
 import { ADALService } from "./adal.service";
 import { environment } from "src/environments/environment";
+import * as MicrosoftGraph from "@microsoft/microsoft-graph-types";
 
 @Component({
   selector: "app-adal",

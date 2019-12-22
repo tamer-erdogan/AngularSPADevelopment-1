@@ -43,7 +43,7 @@ export class ADALService {
     });
   }
 
-  createEvent(item, cal) {
+  createEvent(item, query: string) {
     this.adalSvc.acquireToken("graphApiUri").subscribe((token: string) => {
       localStorage.setItem(this.adalToken, token);
 
@@ -55,7 +55,11 @@ export class ADALService {
       };
 
       this.httpClient
-        .post(`${environment.o365Config.endpoints.graphApiUri}${cal}`, header)
+        .post(
+          `${environment.o365Config.endpoints.graphApiUri}${query}`,
+          item,
+          header
+        )
         .subscribe(data => console.log(data));
     });
   }
