@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {}
+    "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {}
   },
   "projects": {
-    "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {
+    "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
+        "projectUniqueName": "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
         "projectName": "ngDemoAppApi",
-        "projectPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
+        "projectPath": "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\obj\\",
+        "outputPath": "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
