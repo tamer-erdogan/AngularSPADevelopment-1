@@ -31,7 +31,7 @@ Dieses Seminar richtet sich an Web Entwickler welche Angular Anwendungen entwick
 
 # Vortragsart
 
-Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Module werden die erlernten Inhalte in eine durchgängige Anwendung integriert, welches am Ende in die Cloud publiziert werden kann. Wir empfehlen Visual Studio Code als Cross Platform Fähigen Editor.
+Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Module werden die erlernten Inhalte in eine durchgängige Anwendung integriert, welches am Ende in die Cloud publiziert werden kann. Wir empfehlen Visual Studio Code als Cross Platform fähigen Editor.
 
 # Voraussetzungen
 
