@@ -6,8 +6,9 @@ import {
   HttpRequest
 } from "@angular/common/http";
 import { FirebaseAuthService } from "./firebase-auth.service";
-import { Inject, forwardRef } from "@angular/core";
+import { Inject, forwardRef, Injectable } from "@angular/core";
 
+@Injectable()
 export class FirebaseAuthInterceptor implements HttpInterceptor {
   constructor(
     @Inject(forwardRef(() => FirebaseAuthService)) as: FirebaseAuthService
