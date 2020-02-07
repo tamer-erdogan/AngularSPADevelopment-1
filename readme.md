@@ -2,7 +2,10 @@
 
 > Author: [Alexander Pajer](https://www.integrations.at)
 
-> Kursbeschreibung
+> Dauer:
+> 5 Tage
+
+## Modules
 
 Im Seminar "Angular Single Page Application Development" lernen Sie Angular gemeinsam mit Node.js / .NET Core einzusetzen und damit "Single Page Applications" (SPA's) zu erstellen. Beginnend mit Projektkonfiguration & Angular Basics vertiefen wir unsere Kenntnisse, um schließlich alle Teile des Angular Eco-Systems, inklusive Responsive UI Design, Security, Testing & Hosting zu behandeln.
 
@@ -22,23 +25,20 @@ Nach Abschluss dieses Seminars haben die Teilnehmer Kenntnisse zu folgenden Them
 - Angular Unit Testing
 - Securing & Publishing the Application
 
-> Zielgruppe
+# Zielgruppe
 
 Dieses Seminar richtet sich an Web Entwickler welche Angular Anwendungen entwickeln möchten.
 
-> Vortragsart
+# Vortragsart
 
 Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Module werden die erlernten Inhalte in eine durchgängige Anwendung integriert. Der Kurs wird mit Visual Studio Code gehalten.
 
-> Voraussetzungen
+# Voraussetzungen
 
 - JavaScript und HTML Basics (Kurs: Programming HTML5, JavaScript and CSS3)
 - Erfahrung mit Web Development
 - Kenntnis von Objektorientierten Sparchen
 - Kenntnis von modernen Web Technologien (Node, Webpack, TypeScript, Flexbox, CSS Grid, ...) hilfreich. Diese werden im Kurs Advanced Web Technologies (webADV) vermittelt.
-
-> Dauer:
-> 5 Tage
 
 # Details
 
