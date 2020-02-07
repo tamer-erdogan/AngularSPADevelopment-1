@@ -12,7 +12,6 @@ import { CreatingObservableComponent } from "./samples/creating-observables/crea
 import { FlexLayoutApiComponent } from "./samples/flex-layout-api/flex-layout-api.component";
 import { MouseDomObservablesComponent } from "./samples/mouse-dom-observables/mouse-dom-observables.component";
 import { MovieRendererComponent } from "./samples/movie-renderer/movie-renderer.component";
-import { MovieService } from "./samples/movie.service";
 import { DebouncedSearchComponent } from "./samples/operators/debounced-search/debounced-search.component";
 import { OperatorsComponent } from "./samples/operators/operators.component";
 import { SubjectsComponent } from "./samples/subjects/subjects.component";
@@ -93,6 +92,6 @@ const demoRoutes: Routes = [
     }),
     EmbedVideo.forRoot()
   ],
-  providers: [DemoService, VouchersService, MovieService]
+  providers: [DemoService, VouchersService]
 })
 export class DemosModule {}

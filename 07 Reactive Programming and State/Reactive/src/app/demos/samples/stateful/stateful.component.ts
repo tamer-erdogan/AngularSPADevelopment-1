@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { MatTableDataSource } from "@angular/material";
+import { MatTableDataSource } from "@angular/material/table";
 import { StatefulVoucherService } from "./stateful-voucher.service";
 import { Voucher } from "../model";
 

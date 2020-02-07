@@ -10,7 +10,7 @@ import { debounceTime, map } from "rxjs/operators";
 export class DebouncedSearchComponent implements OnInit {
   constructor() {}
 
-  @ViewChild("searchBox", { static: false }) searchBox: ElementRef;
+  @ViewChild("searchBox") searchBox: ElementRef;
   searchterm: string = "";
 
   ngOnInit() {}

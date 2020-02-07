@@ -14,8 +14,8 @@ import { map,switchMap,takeUntil,pairwise } from "rxjs/operators";
   styleUrls: ["./mouse-dom-observables.component.scss"]
 })
 export class MouseDomObservablesComponent {
-  @ViewChild("signPad", { static: false }) signPad: ElementRef;
-  @ViewChild("searchBox", { static: false }) searchBox: ElementRef;
+  @ViewChild("signPad") signPad: ElementRef;
+  @ViewChild("searchBox") searchBox: ElementRef;
 
   result: { X: number; Y: number } = { X: -1, Y: -1 };
 
