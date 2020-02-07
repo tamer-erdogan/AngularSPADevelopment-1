@@ -124,7 +124,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Creating Observables & Casting to Observables
 - Capturing Mouse & DOM Events as Observables
 - Subscribing to Routes & Params, Flex Layout API
-- Common Operators
+- Using Common RxJS Operators
 
 ## Managing State & Sharing Events
 
