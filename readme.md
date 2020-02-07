@@ -5,7 +5,7 @@
 > Dauer:
 > 5 Tage
 
-## Modules
+## Themen
 
 Im Seminar "Angular Single Page Application Development" lernen Sie Angular gemeinsam mit Node.js / .NET Core einzusetzen und damit "Single Page Applications" (SPA's) zu erstellen. Beginnend mit Projektkonfiguration & Angular Basics vertiefen wir unsere Kenntnisse, um schließlich alle Teile des Angular Eco-Systems, inklusive Responsive UI Design, Security, Testing & Hosting zu behandeln.
 
@@ -42,7 +42,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 ---
 
-# Details
+# Module
 
 ## Angular Introduction & Setup
 
