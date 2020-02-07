@@ -49,20 +49,20 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Setup your Dev Environment
 - What is a SPA?
 - Angular Overview and Version Comparison
-- Node and its Position in the Angular ECO-System
+- Node and its Role in the Angular ECO-System
 - Angular Command Line Interface – Angular CLI
-- Bootstrapping Angular / Project Konfiguration
+- Bootstrapping Angular
 - Angular Debugging Options
 
 ## TypeScript Fundamentals
 
 - ECMA Script Standards
 - TypeScript Overview, Configuration, Debugging
-- 3rd Party Libraries & Type Definitions
 - Types, Arrays & Functions
 - ECMA Script 6+ Essentials
 - Objects, Classes, Interfaces
-- Understanding Modules & Module Loading
+- 3rd Party Libraries & Type Definitions
+- Async Operations, Promises & Observables
 
 ## Fundamentals & Completing Basic Tasks
 
