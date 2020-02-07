@@ -72,8 +72,6 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Classic vs Standalone (Moduleless) Components
 - Pipes & Localization
 - Custom Directives & Pipes
-- Reusable Components using Local References & Content Projection
-- View Child, View Children
 
 ## Nesting Components
 
@@ -81,7 +79,8 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Databinding & Events with Nested Components
 - Container vs Presentational Components
 - Understanding Component Lifecycle
-- Introduction to Angular Change Detection
+- Reusable Components using Local References & Content Projection
+- View Child, View Children
 
 ## Routing & Modularity
 
