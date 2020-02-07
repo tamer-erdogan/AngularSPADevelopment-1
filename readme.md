@@ -40,7 +40,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 > Dauer:
 > 5 Tage
 
-# Detailbeschreibung
+# Details
 
 ## Angular Introduction & Setup
 
@@ -159,4 +159,4 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Preperations for Deployment
 - Creating a Production Build
 - Hosting Option Overview (Webserver, Docker, …)
-- Matering Url Rewrite
+- Url Rewrite
