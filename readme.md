@@ -93,7 +93,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Module Lazy Loading
 - Preloading Feature Modules
 
-## Designing User Interface
+## Designing the User Interface
 
 - Global & Component Styles
 - Using Sass (Synthetically Awesome Stylesheets)
@@ -109,7 +109,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Template Driven Forms vs Reactive (Model Based) Forms
 - FormControl, FormArrays & Cascading Forms
 - Validating Forms
-- Custom & Code Based Validators
+- Custom- & Code-Based Validators
 
 ## Consuming RESTful Services
 
