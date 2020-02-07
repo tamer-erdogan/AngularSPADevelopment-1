@@ -66,11 +66,10 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 ## Fundamentals & Completing Basic Tasks
 
-- Modules & Dependency Injection
-- Classic vs Standalone (Moduleless) Components
-- Components, Expressions, Templates & Directives
+- Components, Modules & Dependency Injection
+- Expressions, Templates & Directives
 - String Interpolation, Property- & Event-Binding, Two-Way Binding
-- Understanding Component Lifecycle
+- Classic vs Standalone (Moduleless) Components
 - Pipes & Localization
 - Custom Directives & Pipes
 - Reusable Components using Local References & Content Projection
@@ -78,9 +77,10 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 ## Nesting Components
 
-- Why Nesting
+- Splitting the UI to Nested Components
 - Databinding & Events with Nested Components
 - Container vs Presentational Components
+- Understanding Component Lifecycle
 - Introduction to Angular Change Detection
 
 ## Routing & Modularity
@@ -91,7 +91,6 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Preloading Component Data
 - Organizing Angular Applications using Modules
 - Module Lazy Loading
-- Preloading Feature Modules
 
 ## Designing the User Interface
 
@@ -152,4 +151,4 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Using Interceptors to Automate Tokens
 - Preparing & Creating a Production Build
 - Hosting Option Overview (Webserver, Docker, …)
-- Url Rewrite
+- Mastering Url Rewrite
