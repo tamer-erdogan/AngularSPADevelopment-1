@@ -27,7 +27,6 @@ import { PersonEditComponent } from "./samples/persons/person-edit/person-edit.c
 import { PersonsListComponent } from "./samples/persons/persons-list/persons-list.component";
 import { EmployeeComponent } from "./samples/content-projection/employee/employee.component";
 import { DemoNavComponent } from "./samples/content-projection/demo-nav/demo-nav.component";
-import { UnderlineDirective } from "./samples/custom-directives/underline.directive";
 import { AlertComponent } from "./samples/view-child/alert/alert.component";
 import { VouchersService } from "./samples/voucher.service";
 import { PersonService } from "./samples/persons/person.service";
@@ -82,7 +81,6 @@ const demoRoutes: Routes = [
     PersonsListComponent,
     EmployeeComponent,
     DemoNavComponent,
-    UnderlineDirective,
     AlertComponent
   ],
   imports: [

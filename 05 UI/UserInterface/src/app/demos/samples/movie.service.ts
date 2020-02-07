@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Movie } from "./Movie";
-import { MovieGenerator } from "./movie-generator";
 
 @Injectable({
   providedIn: "root"
@@ -15,10 +14,10 @@ export class MovieService {
     console.log("reset media$");
     this.movies = [];
 
-    let movieGenerator = MovieGenerator(itemCount);
+    // let movieGenerator = MovieGenerator(itemCount);
 
     for (let i = 0; i < itemCount; i++) {
-      this.movies.push(movieGenerator.next().value);
+      this.movies.push(new Movie());
     }
 
     return this.movies;

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { MatStepper } from "@angular/material";
+import { MatStepper } from "@angular/material/stepper";
 
 @Component({
   selector: "app-stepper",
