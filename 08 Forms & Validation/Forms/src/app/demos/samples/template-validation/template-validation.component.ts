@@ -10,7 +10,7 @@ import { emptyPerson } from "../empty-person";
   styleUrls: ["./template-validation.component.scss"]
 })
 export class TemplateValidationComponent implements OnInit {
-  @ViewChild("personForm", { static: false }) form: NgForm;
+  @ViewChild("personForm") form: NgForm;
 
   person: Person = emptyPerson;
 
