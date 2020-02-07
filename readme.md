@@ -1,5 +1,7 @@
 # Angular Single Page Application (SPA) Development
 
+Author: [Alexander Pajer](https://www.integrations.at)
+
 ## Kursbeschreibung
 
 Im Seminar "Angular Single Page Application Development” lernen Sie Angular gemeinsam mit Node.js / .NET Core einzusetzen und damit "Single Page Applications" (SPA's) zu erstellen. Beginnend mit Projektkonfiguration & Angular Basics vertiefen wir unsere Kenntnisse, um schließlich alle Teile des Angular Eco-Systems, inklusive Responsive UI Design, Security, Testing & Hosting zu behandeln.
@@ -54,7 +56,6 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Angular Command Line Interface – Angular CLI
 - Bootstrapping Angular / Project Konfiguration
 - Debugging Angular using Augury
-
 
 ## TypeScript Fundamentals
 
