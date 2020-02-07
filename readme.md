@@ -118,7 +118,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Using JSON Server for Protytyping
 - Implementing the Client-Side Data Models
 
-## Introduction to Observables & Reactive Programming
+## Observables & Reactive Programming
 
 - What is / Benfits of Reactive Programming
 - Observable, Observer & Subject
@@ -133,7 +133,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - State Management Options
 - Stateless & Stateful Services
 - Sharing Data between deeply Nested Components
-- Sharing Events between deeply Nested Components
+- Service Bus & Sharing Events between deeply Nested Components
 - Overview of the Redux Pattern with NgRx HelloWorld
 
 ## Testing Basics
