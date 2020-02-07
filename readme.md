@@ -52,7 +52,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Node and its Position in the Angular ECO-System
 - Angular Command Line Interface – Angular CLI
 - Bootstrapping Angular / Project Konfiguration
-- Debugging Angular using Augury
+- Angular Debugging Options
 
 ## TypeScript Fundamentals
 
@@ -64,7 +64,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Objects, Classes, Interfaces
 - Understanding Modules & Module Loading
 
-## Understanding Fundamentals & Completing Basic Tasks
+## Fundamentals & Completing Basic Tasks
 
 - Modules & Dependency Injection
 - Classic vs Standalone (Moduleless) Components
