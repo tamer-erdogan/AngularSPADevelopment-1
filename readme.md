@@ -40,6 +40,8 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Kenntnis von Objektorientierten Sparchen
 - Kenntnis von modernen Web Technologien (Node, Webpack, TypeScript, Flexbox, CSS Grid, ...) hilfreich. Diese werden im Kurs Advanced Web Technologies (webADV) vermittelt.
 
+---
+
 # Details
 
 ## Angular Introduction & Setup
@@ -86,7 +88,6 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Routing Basics
 - Working with Parameterized Routes
 - Child- & Secondary (Auxiliary) Routes
-- Using Route Guards
 - Preloading Component Data
 - Organizing Angular Applications using Modules
 - Module Lazy Loading
@@ -96,9 +97,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 - Global & Component Styles
 - Using Sass (Synthetically Awesome Stylesheets)
-- Responssive Web Design Basics
-- Using Flexbox & CSS Grid
-- Responsive Layout using Angular Flex Layout
+- Responsive Layout using Flexbox, CSS Grid & Angular Flex Layout
 - Angular Material Overview
 - Using Material Tables, Dialogs & Form Controls
 - Using Bootstrap JumpStart
@@ -107,32 +106,26 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 ## Forms Design & Validation
 
 - Forms Introduction
-- Template Driven Forms
-- Reactive (Model Based) Forms
+- Template Driven Forms vs Reactive (Model Based) Forms
+- FormControl, FormArrays & Cascading Forms
 - Validating Forms
-- Custom & Code Based Validation
+- Custom & Code Based Validators
 
 ## Designing & Accessing Data Models
 
 - Introduction Into .NET Core
-- Implementing Data Models using .NET Core and Entity Framework 2.0
-- Angular Project Configuration for Integration with .NET Core
-- Implementing the Client-Side Data Model
-- Comparison Http vs HttpClient
-- Consuming .NET Core RESTful APIs
-- Using Interceptors
+- Implementing Consuming .NET Core RESTful APIs
+- Using JSON Server for Protytyping
+- Implementing the Client-Side Data Models
 
 ## Introduction to Observables & Reactive Programming
 
-- Consuming REST Services: Observables vs. Promises
+- What is / Benfits of Reactive Programming
 - Observable, Observer & Subject
-- What are Reactive Extensions
-- Use Cases for Reactive Programming
-- Using Built-in Observables
-- Creating Observables from Scratch
-- Using Operators & Pipes
+- Creating Observables & Casting to Observables
 - Capturing Mouse & DOM Events as Observables
 - Subscribing to Routes & Params, Flex Layout API
+- Common Operators
 
 ## Managing State & Sharing Events
 
@@ -141,7 +134,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Stateless & Stateful Services
 - Sharing Data between deeply Nested Components
 - Sharing Events between deeply Nested Components
-- Going beyond: Overview of the Redux Pattern
+- Overview of the Redux Pattern with NgRx HelloWorld
 
 ## Testing Basics
 
@@ -156,7 +149,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Authentication / Authorization Basics in SPAs
 - Token based Auth: Understanding Jwt, OAuth 2.0 & OpenID Connect
 - Securing Angular Routes using Route Guards
-- Preperations for Deployment
-- Creating a Production Build
+- Using Interceptors to Automate Tokens
+- Preparing & Creating a Production Build
 - Hosting Option Overview (Webserver, Docker, …)
 - Url Rewrite
