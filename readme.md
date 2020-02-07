@@ -111,7 +111,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Validating Forms
 - Custom & Code Based Validators
 
-## Designing & Accessing Data Models
+## Consuming RESTful Services
 
 - Introduction Into .NET Core
 - Implementing Consuming .NET Core RESTful APIs
