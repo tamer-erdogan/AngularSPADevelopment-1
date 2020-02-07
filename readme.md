@@ -31,7 +31,7 @@ Dieses Seminar richtet sich an Web Entwickler welche Angular Anwendungen entwick
 
 # Vortragsart
 
-Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Module werden die erlernten Inhalte in eine durchgängige Anwendung integriert, welches am Ende in die Cloud publiziert werden kann. Als Editor verwenden wir Visual Studio Code.
+Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Module werden die erlernten Inhalte in eine durchgängige Anwendung integriert, welches am Ende in die Cloud publiziert werden kann. Wir empfehlen Visual Studio Code als Cross Platform Fähigen Editor.
 
 # Voraussetzungen
 
@@ -46,8 +46,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 ## Angular Introduction & Setup
 
-- Setup your Dev Environment
-- What is a SPA?
+- What / Why Single Page Applications
 - Angular Overview and Version Comparison
 - Node and its Role in the Angular ECO-System
 - Angular Command Line Interface – Angular CLI
