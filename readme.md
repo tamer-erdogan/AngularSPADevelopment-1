@@ -112,12 +112,12 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 - Introduction Into .NET Core
 - Implementing Consuming .NET Core RESTful APIs
-- Using JSON Server for Protytyping
+- Using JSON Server for Prototyping
 - Implementing the Client-Side Data Models
 
 ## Observables & Reactive Programming
 
-- What is / Benfits of Reactive Programming
+- What is Reactive Programming / Benefits
 - Observable, Observer & Subject
 - Creating Observables & Casting to Observables
 - Capturing Mouse & DOM Events as Observables
