@@ -79,7 +79,7 @@ firebase init
 firebase deploy
 ```
 
-> Note: Try it out - it is already configured in `package.json`
+Try it out - it is already configured in `package.json`
 
 ```
 "deploy": "ng build --prod && firebase deploy"
