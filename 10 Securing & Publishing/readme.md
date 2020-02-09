@@ -10,7 +10,7 @@
 "serve": {
     "builder": "@angular-devkit/build-angular:dev-server",
     "options": {
-        "browserTarget": "HelloSSL:build",
+        "browserTarget": "ngDemoApp:build",
         "ssl": true,
         "sslKey": "/ssl/server.key",
         "sslCert": "/ssl/server.crt"
@@ -29,7 +29,7 @@ chrome://flags/#allow-insecure-localhost
 
 [OpenID Connect](https://connect2id.com/learn/openid-connect)
 
-## Free Could Trials:
+## Free Cloud Trials:
 
 ### Firebase
 
@@ -77,4 +77,10 @@ npm i -g firebase-tools
 firebase login
 firebase init
 firebase deploy
+```
+
+> Note: Try it out - it is already configured in `package.json`
+
+```
+"deploy": "ng build --prod && firebase deploy"
 ```

@@ -12,7 +12,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:stats": "ng build --statsJson",
+    "analyze": "webpack-bundle-analyzer ./dist/MaintenanceUi/stats-es2015.json -p 5010",
+    "deploy": "ng build --prod && firebase deploy"
   },
   "private": true,
   "dependencies": {
