@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder } from "@angular/forms";
+import {
+  FormGroup,
+  FormBuilder,
+  FormArray,
+  AbstractControl
+} from "@angular/forms";
 
 @Component({
   selector: "app-reactive-cascade",
@@ -34,6 +39,10 @@ export class ReactiveCascadeComponent {
   ];
 
   selects: string[];
+
+  public getOptionGroupControls(): AbstractControl[] {
+    return (this.profileForm.controls["optionGroups"] as FormArray).controls;
+  }
 
   public saveProfileForm() {
     console.log(this.profileForm.value);
