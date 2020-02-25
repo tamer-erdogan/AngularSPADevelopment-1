@@ -1,58 +1,42 @@
-﻿using System;
-using JSNLog;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Facebook;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json.Serialization;
-using NLog.Extensions.Logging;
-using NLog.Web;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 
 namespace Vouchers {
     public class Startup {
-        private readonly IHostingEnvironment env;
-
-        public Startup (IHostingEnvironment environment) {
-            env = environment;
+        public Startup (IConfiguration configuration) {
+            Configuration = configuration;
         }
 
+        public IConfiguration Configuration { get; }
+        public IWebHostEnvironment env { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
-            //Config
-            var cfgBuilder = new ConfigurationBuilder ()
-                .SetBasePath (env.ContentRootPath)
-                .AddJsonFile ("appsettings.json");
-            var configuration = cfgBuilder.Build ();
-            services.Configure<VouchersConfig> (configuration);
-            services.AddSingleton (typeof (IConfigurationRoot), configuration);
-
-            //EF
-
             // SQL Server ... use "SQLServerDBConnection" ConString
-            // var conStr = configuration["ConnectionStrings:SQLServerDBConnection"];
-            // services.AddEntityFrameworkSqlServer()
-            //     .AddDbContext<VouchersDBContext>(options => options.UseSqlServer(conStr));
+            var conStr = Configuration["ConnectionStrings:SQLServerDBConnection"];
+            services.AddDbContext<VouchersDBContext> (options =>
+                options.UseSqlServer (conStr));
 
             // SQLite ... use "SQLServerDBConnection" ConString
-            var conStrLite = configuration["ConnectionStrings:SQLiteDBConnection"];
-            services.AddEntityFrameworkSqlite ().AddDbContext<VouchersDBContext> (options => options.UseSqlite (conStrLite));
-
-            //Simple Windows Auth
-            services.AddAuthentication (HttpSysDefaults.AuthenticationScheme);
+            // var conStrLite = Configuration["ConnectionStrings:SQLiteDBConnection"];
+            // services.AddDbContext<VouchersDBContext> (options =>
+            //     options.UseSqlite (conStrLite));
 
             //Firebase
 
-            var fbProjectId = configuration["Firebase:ProjectId"];
-
+            var fbProjectId = Configuration["Firebase:ProjectId"];
             services
                 .AddAuthentication (JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer (options => {
@@ -67,13 +51,10 @@ namespace Vouchers {
                 });
 
             //CORS
-            //Required if you develop Angular on a seperate proj
-            // For specific URL ie. your Angular CLI Frontend use: 
-            // corsBuilder.WithOrigins("http://localhost:4200")           
-
+            var corsUrl = Configuration["FrontendUrl"];
             services.AddCors (options => {
-                options.AddPolicy ("AllowAll",
-                    builder => builder.AllowAnyOrigin ()
+                options.AddPolicy ("CustomCors",
+                    builder => builder.WithOrigins (corsUrl)
                     .AllowAnyMethod ()
                     .AllowAnyHeader ()
                     .AllowCredentials ());
@@ -81,51 +62,21 @@ namespace Vouchers {
 
             //Swagger
             services.AddSwaggerGen (c => {
-                c.SwaggerDoc ("v1", new Info { Title = "Vouchers API", Version = "v1" });
+                c.SwaggerDoc ("v1", new OpenApiInfo { Title = "Vouchers API", Version = "v1" });
             });
 
-            //Serialization Options
-            services.AddMvc ().AddJsonOptions (ser => {
-                ser.SerializerSettings.ContractResolver =
-                    new DefaultContractResolver ();
-            });
+            services.AddControllers ();
         }
 
-        public void Configure (IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,
-            VouchersDBContext dbcontext) {
-            //Logging
-            loggerFactory.AddNLog ();
-            env.ConfigureNLog ("nlog.config");
-
-            var jsnlogConfiguration = new JsnlogConfiguration ();
-            app.UseJSNLog (new LoggingAdapter (loggerFactory), jsnlogConfiguration);
-
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment ()) {
                 app.UseDeveloperExceptionPage ();
                 app.UseStatusCodePages ();
             }
 
-            //Startup File for serving a *.html as default
-
-            // DefaultFilesOptions options = new DefaultFilesOptions();
-            // options.DefaultFileNames.Clear();
-            // options.DefaultFileNames.Add("crud.html");
-            // app.UseDefaultFiles(options);
-
-            if (env.IsDevelopment ()) {
-                app.UseStaticFiles (new StaticFileOptions {
-                    OnPrepareResponse = context => {
-                        context.Context.Response.Headers["Cache-Control"] = "no-cache, no-store";
-                        context.Context.Response.Headers["Pragma"] = "no-cache";
-                        context.Context.Response.Headers["Expires"] = "-1";
-                    }
-                });
-            } else {
-                app.UseStaticFiles ();
-            }
-
             //Cors
-            app.UseCors ("AllowAll");
+            app.UseCors ("FrontendUrl");
 
             app.UseSwagger ();
             app.UseSwaggerUI (c => {
@@ -133,10 +84,15 @@ namespace Vouchers {
                 c.RoutePrefix = string.Empty;
             });
 
-            //Auth
-            app.UseAuthentication ();
+            app.UseHttpsRedirection ();
 
-            app.UseMvc ();
+            app.UseRouting ();
+
+            app.UseAuthorization ();
+
+            app.UseEndpoints (endpoints => {
+                endpoints.MapControllers ();
+            });
         }
     }
 }

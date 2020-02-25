@@ -26,7 +26,7 @@ describe("FoodComponent:", () => {
   it("removes the item from the list", () => {
     comp.food = foodData;
     mockFS.deleteItem.and.returnValue(of(serviceResult));
-    comp.deleteFood(foodData[3]);
+    comp.deleteFood(foodData[2]);
 
     expect(comp.food.length).toBe(3);
   });

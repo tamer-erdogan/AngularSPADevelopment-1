@@ -2,13 +2,9 @@
 
 ## .NET Core Setup
 
-Net Core 2.2 SDK
+[Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-https://dotnet.microsoft.com/download
-
-Windows Hosting Bundle
-
-https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.0-windows-hosting-bundle-installer
+For IIS Hosting: [Windows Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-aspnetcore-3.1.2-windows-hosting-bundle-installer)
 
 ## SQL Server Setup
 

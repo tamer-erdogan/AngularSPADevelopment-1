@@ -27,11 +27,11 @@ import { FirebaseAuthInterceptor } from "./demos/samples/firebase/firebase-auth.
     MsAdalAngular6Module.forRoot(environment.o365Config)
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: FirebaseAuthInterceptor,
-      multi: true
-    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: FirebaseAuthInterceptor,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })

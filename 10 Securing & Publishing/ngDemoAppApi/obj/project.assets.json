@@ -7103,11 +7103,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
+      "projectUniqueName": "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
       "projectName": "ngDemoAppApi",
-      "projectPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
+      "projectPath": "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\ngDemoAppApi.csproj",
       "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-      "outputPath": "H:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\obj\\",
+      "outputPath": "h:\\Classes\\AngularSPADevelopment\\10 Securing & Publishing\\ngDemoAppApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7244,7 +7244,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

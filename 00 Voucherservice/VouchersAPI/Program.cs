@@ -1,48 +1,22 @@
-﻿using System;
-using System.Net;
-using Microsoft.AspNetCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Server.HttpSys;
-using Vouchers;
-using AuthenticationSchemes = Microsoft.AspNetCore.Server.HttpSys.AuthenticationSchemes;
 
-namespace VouchersNetCore
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var host = BuildWebHost(args);
-
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    var context = services.GetRequiredService<VouchersDBContext>();
-                    DbInitializer.Initialize(context);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred while seeding the database.");
-                }
-            }
-
-            host.Run();
+namespace Vouchers {
+    public class Program {
+        public static void Main (string[] args) {
+            CreateHostBuilder (args).Build ().Run ();
         }
 
-        public static IWebHost BuildWebHost(string[] args) => WebHost.CreateDefaultBuilder(args)
-            .ConfigureLogging((hostingContext, logging) =>
-            {
-                logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
-                logging.AddConsole();
-                logging.AddDebug();
-                logging.AddEventSourceLogger();
-            })
-            .UseStartup<Startup>()
-            .Build();
+        public static IHostBuilder CreateHostBuilder (string[] args) =>
+            Host.CreateDefaultBuilder (args)
+            .ConfigureWebHostDefaults (webBuilder => {
+                webBuilder.UseStartup<Startup> ();
+            });
     }
 }

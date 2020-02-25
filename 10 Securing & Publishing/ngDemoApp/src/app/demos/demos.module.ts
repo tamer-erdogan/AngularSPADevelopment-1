@@ -40,13 +40,6 @@ const demoRoutes: Routes = [
     MaterialModule,
     HttpClientModule
   ],
-  providers: [
-    DemoService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: FirebaseAuthInterceptor,
-      multi: true
-    }
-  ]
+  providers: [DemoService]
 })
 export class DemosModule {}

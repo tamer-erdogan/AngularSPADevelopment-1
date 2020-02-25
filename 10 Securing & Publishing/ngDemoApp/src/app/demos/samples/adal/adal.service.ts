@@ -15,7 +15,7 @@ export class ADALService {
   }
 
   user: any;
-  adalToken = "adelToken";
+  adalToken = "adalToken";
 
   logIn() {
     this.adalSvc.login();

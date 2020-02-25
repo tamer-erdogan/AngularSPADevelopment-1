@@ -178,3 +178,4 @@ H:\Classes\AngularSPADevelopment\10 Securing & Publishing\ngDemoAppApi\obj\Debug
 H:\Classes\AngularSPADevelopment\10 Securing & Publishing\ngDemoAppApi\obj\Debug\netcoreapp3.1\ngDemoAppApi.csproj.CopyComplete
 H:\Classes\AngularSPADevelopment\10 Securing & Publishing\ngDemoAppApi\obj\Debug\netcoreapp3.1\ngDemoAppApi.dll
 H:\Classes\AngularSPADevelopment\10 Securing & Publishing\ngDemoAppApi\obj\Debug\netcoreapp3.1\ngDemoAppApi.pdb
+H:\Classes\AngularSPADevelopment\10 Securing & Publishing\ngDemoAppApi\bin\Debug\netcoreapp3.1\package-lock.json
