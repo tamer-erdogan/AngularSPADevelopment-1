@@ -75,9 +75,6 @@ namespace Vouchers {
                 app.UseStatusCodePages ();
             }
 
-            //Cors
-            app.UseCors ("FrontendUrl");
-
             app.UseSwagger ();
             app.UseSwaggerUI (c => {
                 c.SwaggerEndpoint ("/swagger/v1/swagger.json", "Vouchers API V1");
@@ -87,6 +84,8 @@ namespace Vouchers {
             app.UseHttpsRedirection ();
 
             app.UseRouting ();
+
+            app.UseCors ("FrontendUrl");
 
             app.UseAuthorization ();
 
