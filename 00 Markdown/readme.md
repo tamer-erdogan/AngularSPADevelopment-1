@@ -1,6 +1,6 @@
 # Markdown
 
-Add your own Comments using Markdown
+Document your Repo using Markdown
 
 [Intro to Markdown - Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 

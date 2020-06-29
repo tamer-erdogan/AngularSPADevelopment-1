@@ -105,8 +105,6 @@ H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcore
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
-H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
@@ -115,3 +113,8 @@ H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\obj\Debug\netcore
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\obj\Debug\netcoreapp3.1\VouchersApi.csproj.CopyComplete
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\obj\Debug\netcoreapp3.1\VouchersApi.dll
 H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\obj\Debug\netcoreapp3.1\VouchersApi.pdb
+H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\obj\Debug\netcoreapp3.1\VouchersAPI.csproj.CoreCompileInputs.cache
+H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersAPI\obj\Debug\netcoreapp3.1\VouchersAPI.genruntimeconfig.cache
+H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+H:\Classes\AngularSPADevelopment\00 Voucherservice\VouchersApi\bin\Debug\netcoreapp3.1\System.Text.Json.dll

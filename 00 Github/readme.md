@@ -1,4 +1,28 @@
-# Github Essentials
+# Getting Started with Source Control
+
+[Git Bash Download](https://git-scm.com/downloads)
+
+[Git Extensions for Windows](https://sourceforge.net/projects/gitextensions/)
+
+[Git Graph VS Code](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+
+[Git History Diff](https://marketplace.visualstudio.com/items?itemName=huizhou.githd)
+
+[Visual Studio Code Download](https://code.visualstudio.com/)
+
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Labs
+
+[Version Controlling with Git in Azure Repos - Exercises 1 - 5](https://www.azuredevopslabs.com/labs/azuredevops/git/)
+
+## Learning Labs:
+
+[Introduction to Git](https://docs.microsoft.com/en-us/learn/modules/intro-to-git/)
+
+[Learning Path - Introduction to version control with Git](https://docs.microsoft.com/en-us/learn/paths/intro-to-vc-git/)
+
+# Git / Github Essentials
 
 ## Configuration
 
@@ -72,6 +96,8 @@ Add a `.gitignore` file to the root of your project. A valid `.gitignore` file c
 
 ## Refresh from Upstream
 
+> Note: You can use this guide to refresh changes I made during the week to your forked repo
+
 Open Git Bash.
 
 List the current configured remote repository for your fork.
@@ -102,10 +128,6 @@ Fetch from Upstream:
 
 ```
  git fetch upstream
+ git merge upstream/master
+ git push origin master
 ```
-
-# Extensions
-
-[Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-
-[Git Extensions for Windows](https://github.com/gitextensions/gitextensions)
