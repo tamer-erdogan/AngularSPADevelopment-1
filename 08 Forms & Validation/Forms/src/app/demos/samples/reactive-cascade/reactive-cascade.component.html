@@ -26,17 +26,8 @@
       </ng-container>
 
       <ng-container formArrayName="optionGroups">
-        <!-- ng9 Template check error! -->
-        <!-- Solve using -->
-        <!-- <div
-          *ngFor="let optionGroup of getOptionGroupControls; let i = index"
-          [formGroup]="optionGroup"
-        > -->
         <div
-          *ngFor="
-            let optionGroup of profileForm.controls['optionGroups'].controls;
-            let i = index
-          "
+          *ngFor="let optionGroup of getOptionGroupControls; let i = index"
           [formGroup]="optionGroup"
         >
           <h4>Skill {{ i + 1 }}</h4>
