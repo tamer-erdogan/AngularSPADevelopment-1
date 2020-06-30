@@ -10,5 +10,9 @@ choco install gitextensions -y
 choco install 7zip -y
 choco install docker-desktop -y
 choco install nvm -y
+
 nvm install 10.21.0
 nvm install 12.18.1
+nvm use 12.18.1
+
+npm i -g @angular/core
