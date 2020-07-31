@@ -4,16 +4,27 @@
     <mat-card-subtitle>Subtitle</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <div fxLayout="row" fxFlexFill>
+    <div fxLayout="row" fxLayout.lt-md="column" fxFlexFill>
       <mat-form-field fxFlex="1 1 auto">
-        <input matInput type="text" placeholder="Plz" />
+        <input matInput type="text" placeholder="Name" [formControl]="name" />
+        <mat-error *ngIf="!name.valid">
+          Name is required
+        </mat-error>
       </mat-form-field>
       <mat-form-field fxFlex="1 1 auto">
-        <input matInput type="text" placeholder="City" />
+        <input matInput type="text" placeholder="Plz" [formControl]="postal" />
+      </mat-form-field>
+      <mat-form-field fxFlex="1 1 auto">
+        <input matInput type="text" placeholder="City" [formControl]="city" />
+        <mat-error *ngIf="!city.valid">
+          Max Lenght for city is 15 characters
+        </mat-error>
       </mat-form-field>
     </div>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-button>Action1</button>
+    <button mat-button (click)="name.reset('Cleo')">Reset Name</button>
+    <button mat-button (click)="updateName()">Update Name</button>
+    <button mat-button>Save</button>
   </mat-card-actions>
 </mat-card>

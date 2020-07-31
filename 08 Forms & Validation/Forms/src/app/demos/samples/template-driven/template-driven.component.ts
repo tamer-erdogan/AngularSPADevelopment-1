@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import { Person, WorkLifeBalance } from "../person";
-import { PersonService } from "../person.service";
-import { emptyPerson, wealthOpts } from "../empty-person";
+import { Component, OnInit } from '@angular/core';
+import { Person, WorkLifeBalance } from '../person.model';
+import { PersonService } from '../person.service';
+import { emptyPerson, wealthOpts } from '../empty-person';
 
 @Component({
-  selector: "app-template-driven",
-  templateUrl: "./template-driven.component.html",
-  styleUrls: ["./template-driven.component.scss"]
+  selector: 'app-template-driven',
+  templateUrl: './template-driven.component.html',
+  styleUrls: ['./template-driven.component.scss'],
 })
 export class TemplateDrivenComponent implements OnInit {
   person: Person = emptyPerson;
@@ -15,7 +15,7 @@ export class TemplateDrivenComponent implements OnInit {
   constructor(private ps: PersonService) {}
 
   ngOnInit() {
-    this.ps.getPerson().subscribe(p => {
+    this.ps.getPerson().subscribe((p) => {
       this.person = p;
     });
   }

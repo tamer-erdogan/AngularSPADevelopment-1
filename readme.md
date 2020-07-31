@@ -104,7 +104,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 - Forms Introduction
 - Template Driven Forms vs Reactive (Model Based) Forms
-- FormControl, FormArrays & Cascading Forms
+- FormControl, FormGroups & FormArrays
 - Validating Forms
 - Custom- & Code-Based Validators
 

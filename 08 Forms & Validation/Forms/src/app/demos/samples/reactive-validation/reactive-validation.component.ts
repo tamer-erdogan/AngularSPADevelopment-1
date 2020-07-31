@@ -4,17 +4,17 @@ import {
   FormControl,
   FormGroup,
   ValidationErrors,
-  Validators
+  Validators,
 } from '@angular/forms';
 import { emptyPerson, wealthOpts } from '../empty-person';
-import { Person } from '../person';
+import { Person } from '../person.model';
 import { PersonService } from '../person.service';
 import { asyncMailExistsValidator } from './asyncMailExistsValidator';
 
 @Component({
   selector: 'app-reactive-validation',
   templateUrl: './reactive-validation.component.html',
-  styleUrls: ['./reactive-validation.component.scss']
+  styleUrls: ['./reactive-validation.component.scss'],
 })
 export class ReactiveValidationComponent implements OnInit {
   person: Person = emptyPerson;
@@ -35,7 +35,7 @@ export class ReactiveValidationComponent implements OnInit {
   }
 
   private loadData() {
-    this.ps.getPerson().subscribe(p => {
+    this.ps.getPerson().subscribe((p) => {
       this.personForm.setValue(p);
     });
   }
@@ -44,7 +44,7 @@ export class ReactiveValidationComponent implements OnInit {
     this.personForm = this.fb.group({
       name: [
         this.person.name,
-        [Validators.required, Validators.minLength(4), this.validateName]
+        [Validators.required, Validators.minLength(4), this.validateName],
       ],
       age: [this.person.age, [Validators.min(18), Validators.max(99)]],
       gender: [this.person.gender],
@@ -52,14 +52,14 @@ export class ReactiveValidationComponent implements OnInit {
         this.person.email,
         [Validators.required, Validators.email],
         [this.mailExistsValidator],
-        { updateOn: 'blur' }
+        { updateOn: 'blur' },
       ],
-      wealth: [this.person.wealth]
+      wealth: [this.person.wealth],
     });
   }
 
   private subscribeChanges() {
-    this.personForm.valueChanges.subscribe(vals => {
+    this.personForm.valueChanges.subscribe((vals) => {
       console.log('changes happening @form: ', vals);
     });
   }

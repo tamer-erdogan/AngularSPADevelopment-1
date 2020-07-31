@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Person } from "../person";
-import { emptyPerson, wealthOpts } from "../empty-person";
-import { PersonService } from "../person.service";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Person } from '../person.model';
+import { emptyPerson, wealthOpts } from '../empty-person';
+import { PersonService } from '../person.service';
 
 @Component({
-  selector: "app-forms-builder",
-  templateUrl: "./forms-builder.component.html",
-  styleUrls: ["./forms-builder.component.scss"]
+  selector: 'app-forms-builder',
+  templateUrl: './forms-builder.component.html',
+  styleUrls: ['./forms-builder.component.scss'],
 })
 export class FormsBuilderComponent implements OnInit {
   person: Person = emptyPerson;
@@ -18,9 +18,9 @@ export class FormsBuilderComponent implements OnInit {
   constructor(private fb: FormBuilder, private ps: PersonService) {}
 
   ngOnInit() {
-    this.ps.getPerson().subscribe(p => {
+    this.ps.getPerson().subscribe((p) => {
       this.personForm.setValue(p);
-      console.log("Data loaded from service", p);
+      console.log('Data loaded from service', p);
     });
 
     this.personForm = this.fb.group({
@@ -28,13 +28,13 @@ export class FormsBuilderComponent implements OnInit {
       age: [this.person.age],
       gender: [this.person.gender],
       email: [this.person.email],
-      wealth: [this.person.wealth]
+      wealth: [this.person.wealth],
     });
 
     setTimeout(() => {
       //Use this to update form incrementally
-      this.personForm.patchValue({ name: "Heinrich" });
-      console.log("Heinz changed to Heinrich");
+      this.personForm.patchValue({ name: 'Heinrich' });
+      console.log('Heinz changed to Heinrich');
     }, 3000);
   }
 

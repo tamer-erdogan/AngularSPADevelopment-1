@@ -18,9 +18,7 @@
 
         <div
           formArrayName="skillsGrp"
-          *ngFor="
-            let skill of skillForm.controls['skillsGrp'].controls;
-            let i = index
+          *ngFor="let skill of getElementsInFormArray(); let i = index"
           "
         >
           <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">

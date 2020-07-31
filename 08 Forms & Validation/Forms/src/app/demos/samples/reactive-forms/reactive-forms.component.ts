@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
-import { FormControl, FormGroup } from "@angular/forms";
-import { Person } from "../person";
-import { PersonService } from "../person.service";
-import { emptyPerson, wealthOpts } from "../empty-person";
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Person } from '../person.model';
+import { PersonService } from '../person.service';
+import { emptyPerson, wealthOpts } from '../empty-person';
 
 @Component({
-  selector: "app-reactive-forms",
-  templateUrl: "./reactive-forms.component.html",
-  styleUrls: ["./reactive-forms.component.scss"]
+  selector: 'app-reactive-forms',
+  templateUrl: './reactive-forms.component.html',
+  styleUrls: ['./reactive-forms.component.scss'],
 })
 export class ReactiveFormsComponent implements OnInit {
   constructor(private ps: PersonService) {}
@@ -18,7 +18,7 @@ export class ReactiveFormsComponent implements OnInit {
   personForm: FormGroup;
 
   ngOnInit() {
-    this.ps.getPerson().subscribe(p => {
+    this.ps.getPerson().subscribe((p) => {
       this.personForm.setValue(p);
     });
 
@@ -27,7 +27,7 @@ export class ReactiveFormsComponent implements OnInit {
       age: new FormControl(this.person.age),
       email: new FormControl(this.person.email),
       gender: new FormControl(this.person.gender),
-      wealth: new FormControl(this.person.wealth)
+      wealth: new FormControl(this.person.wealth),
     });
   }
 
