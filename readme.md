@@ -92,11 +92,13 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 
 ## Designing the User Interface
 
+- Implementing a CSS Reset
 - Global & Component Styles
 - Using Sass (Synthetically Awesome Stylesheets)
 - Responsive Layout using Flexbox, CSS Grid & Angular Flex Layout
 - Angular Material Overview
-- Introduction to Material Theming
+- Using Material Component schematics
+- Material Theming Colors
 - Using Material Tables, Dialogs & Form Controls
 - Using Angular CDK & 3rd Party Components (Charting, File Upload, Drag & Drop)
 
