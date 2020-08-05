@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-inline",
+  selector: 'app-inline',
   template: `
     <mat-card>
       <mat-card-header>
@@ -12,10 +12,10 @@ import { Component, OnInit } from "@angular/core";
       </mat-card-content>
     </mat-card>
   `,
-  styleUrls: ["./inline.component.scss"]
+  styleUrls: ['./inline.component.scss'],
 })
 export class InlineComponent implements OnInit {
-  title: string = "I am defining my html inline by using template metadata";
+  title = 'I am defining my html inline by using template metadata';
 
   constructor() {}
 

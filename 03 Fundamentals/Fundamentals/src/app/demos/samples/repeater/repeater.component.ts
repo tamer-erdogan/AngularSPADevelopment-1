@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { Person } from "../persons/person";
-import { PersonService } from "../persons/person.service";
+import { Component, OnInit } from '@angular/core';
+import { Person } from '../persons/person.model';
+import { PersonService } from '../persons/person.service';
 
 @Component({
-  selector: "app-repeater",
-  templateUrl: "./repeater.component.html",
-  styleUrls: ["./repeater.component.scss"]
+  selector: 'app-repeater',
+  templateUrl: './repeater.component.html',
+  styleUrls: ['./repeater.component.scss'],
 })
 export class RepeaterComponent implements OnInit {
   persons: Person[];
@@ -13,12 +13,12 @@ export class RepeaterComponent implements OnInit {
   constructor(private ps: PersonService) {}
 
   ngOnInit() {
-    this.ps.getPersons().subscribe(data => {
+    this.ps.getPersons().subscribe((data) => {
       this.persons = data;
     });
   }
 
   savePersonToDB(p: Person) {
-    console.log("saving to db:", p);
+    console.log('saving to db:', p);
   }
 }

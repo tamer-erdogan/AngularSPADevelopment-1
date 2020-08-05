@@ -1,32 +1,32 @@
-import { Component, OnInit } from "@angular/core";
-import { Person } from "../persons/person";
-import { PersonService } from "../persons/person.service";
-import { of } from "rxjs";
-import { delay } from "rxjs/operators";
+import { Component, OnInit } from '@angular/core';
+import { Person } from '../persons/person.model';
+import { PersonService } from '../persons/person.service';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Component({
-  selector: "app-binding",
-  templateUrl: "./binding.component.html",
-  styleUrls: ["./binding.component.scss"]
+  selector: 'app-binding',
+  templateUrl: './binding.component.html',
+  styleUrls: ['./binding.component.scss'],
 })
 export class BindingComponent implements OnInit {
   constructor(private ps: PersonService) {}
 
   hide: boolean = false;
   persons: Person[];
-  selectedPerson: Person = { id: 0, name: "", age: 0, gender: "" };
+  selectedPerson: Person = { id: 0, name: '', age: 0, gender: '' };
   latePerson: Person;
   isActive: boolean = false;
 
   ngOnInit() {
-    this.ps.getPersons().subscribe(data => {
+    this.ps.getPersons().subscribe((data) => {
       this.persons = data;
       if (this.persons.length > 0) {
         this.selectedPerson = this.persons[0];
       }
     });
 
-    of({ name: "Heidi", age: 13, gender: "female" })
+    of({ name: 'Heidi', age: 13, gender: 'female' })
       .pipe(delay(4000))
       .subscribe((data: Person) => {
         this.latePerson = data;
@@ -42,7 +42,7 @@ export class BindingComponent implements OnInit {
   }
 
   handleChange(p: Person) {
-    console.log("value received from eventbinding", p);
+    console.log('value received from eventbinding', p);
   }
 
   logChange(val) {

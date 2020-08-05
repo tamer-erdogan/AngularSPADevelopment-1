@@ -5,16 +5,17 @@ import {
   ViewChild,
   ElementRef,
   QueryList,
-  Renderer2
+  Renderer2,
+  AfterViewChecked,
 } from '@angular/core';
 import { AlertComponent } from './alert/alert.component';
 
 @Component({
   selector: 'app-view-child',
   templateUrl: './view-child.component.html',
-  styleUrls: ['./view-child.component.scss']
+  styleUrls: ['./view-child.component.scss'],
 })
-export class ViewChildComponent implements AfterViewInit {
+export class ViewChildComponent implements AfterViewInit, AfterViewChecked {
   @ViewChild('title', { static: true }) title: ElementRef;
   @ViewChild('parentEl', { static: true }) parentEl: ElementRef;
   @ViewChildren('div') divsList: QueryList<ElementRef>;
@@ -25,7 +26,7 @@ export class ViewChildComponent implements AfterViewInit {
   ngAfterViewInit() {
     console.log('title:', this.title.nativeElement);
     this.doFlex();
-    this.alertComps.forEach(item =>
+    this.alertComps.forEach((item) =>
       console.log('Found AlertComponent: ', item)
     );
   }
@@ -37,7 +38,7 @@ export class ViewChildComponent implements AfterViewInit {
   doFlex() {
     const finalWith = this.calcWidth(this.parentEl, 350);
 
-    this.divsList.forEach(div => {
+    this.divsList.forEach((div) => {
       div.nativeElement.style.height = '4rem';
       div.nativeElement.style.width = finalWith + 'px';
       this.renderer.setStyle(div.nativeElement, 'color', 'blue');
@@ -52,13 +53,13 @@ export class ViewChildComponent implements AfterViewInit {
 
   calcWidth(el: ElementRef<any>, minWidth: number, margins = 20): number {
     const pw = el.nativeElement.clientWidth;
-    let elsPerRow = Math.floor(pw / minWidth);
+    const elsPerRow = Math.floor(pw / minWidth);
     if (elsPerRow > el.nativeElement.childElementCount) {
       return pw / el.nativeElement.childElementCount - margins;
     }
 
-    let cellwidth = pw / elsPerRow;
-    let finalWith =
+    const cellwidth = pw / elsPerRow;
+    const finalWith =
       elsPerRow * minWidth < pw
         ? pw / elsPerRow - margins
         : cellwidth - margins;
@@ -66,7 +67,7 @@ export class ViewChildComponent implements AfterViewInit {
   }
 
   setTitle() {
-    let el: HTMLElement = this.title.nativeElement;
+    const el: HTMLElement = this.title.nativeElement;
     el.innerHTML = '<b>Roses are red</b>';
   }
 }

@@ -1,10 +1,10 @@
-import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
-import { Person } from "../person";
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Person } from '../person.model';
 
 @Component({
-  selector: "app-person-edit",
-  templateUrl: "./person-edit.component.html",
-  styleUrls: ["./person-edit.component.scss"]
+  selector: 'app-person-edit',
+  templateUrl: './person-edit.component.html',
+  styleUrls: ['./person-edit.component.scss'],
 })
 export class PersonEditComponent implements OnInit {
   @Input() person: Person;

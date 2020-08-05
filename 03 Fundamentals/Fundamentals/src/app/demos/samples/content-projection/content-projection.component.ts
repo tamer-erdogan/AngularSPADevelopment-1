@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-content-projection",
-  templateUrl: "./content-projection.component.html",
-  styleUrls: ["./content-projection.component.scss"]
+  selector: 'app-content-projection',
+  templateUrl: './content-projection.component.html',
+  styleUrls: ['./content-projection.component.scss'],
 })
 export class ContentProjectionComponent implements OnInit {
-  person = { id: 1, name: "Soi", age: 7, imgUrl: "" };
+  person = { id: 1, name: 'Soi', age: 7, imgUrl: '' };
 
   constructor() {}
 

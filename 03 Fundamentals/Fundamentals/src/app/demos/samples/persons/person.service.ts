@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import { Observable, of } from "rxjs";
-import { delay } from "rxjs/operators";
-import { Person } from "./person";
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { Person } from './person.model';
 
 @Injectable()
 export class PersonService {
@@ -10,14 +10,14 @@ export class PersonService {
   data: Person[] = [
     {
       id: 1,
-      name: "Alexander",
+      name: 'Alexander',
       age: 49,
-      gender: "male",
+      gender: 'male',
       married: true,
-      imgUrl: "/assets/images/alex.jpg"
+      imgUrl: '/assets/images/alex.jpg',
     },
-    { id: 2, name: "Brunhilde", age: 27, gender: "female", married: false },
-    { id: 3, name: "Susi", age: 37, gender: "female", married: false }
+    { id: 2, name: 'Brunhilde', age: 27, gender: 'female', married: false },
+    { id: 3, name: 'Susi', age: 37, gender: 'female', married: false },
   ];
 
   getPersons(): Observable<Person[]> {

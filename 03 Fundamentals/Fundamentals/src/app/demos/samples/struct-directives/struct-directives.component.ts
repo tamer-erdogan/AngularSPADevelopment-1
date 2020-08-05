@@ -1,31 +1,31 @@
-import { Component, OnInit } from "@angular/core";
-import { VouchersService } from "../voucher.service";
-import { Voucher } from "../model";
+import { Component, OnInit } from '@angular/core';
+import { VouchersService } from '../voucher.service';
+import { Voucher } from '../model';
 
 @Component({
-  selector: "app-struct-directives",
-  templateUrl: "./struct-directives.component.html",
-  styleUrls: ["./struct-directives.component.scss"]
+  selector: 'app-struct-directives',
+  templateUrl: './struct-directives.component.html',
+  styleUrls: ['./struct-directives.component.scss'],
 })
 export class StructDirectivesComponent implements OnInit {
   constructor(private vs: VouchersService) {}
 
-  persons = [{ name: "Heinz" }, { name: "Brunhilde" }, { name: "Susi" }];
+  persons = [{ name: 'Heinz' }, { name: 'Brunhilde' }, { name: 'Susi' }];
   selectedPerson: string = this.persons[0].name;
 
   vouchers: Voucher[];
 
-  showDivOne: boolean = true;
+  showDivOne = true;
 
   currentDirection: DirectionEnum = DirectionEnum.East;
   direction = DirectionEnum;
 
   ngOnInit() {
     this.vs.getVouchers().subscribe(
-      data => {
+      (data) => {
         this.vouchers = data;
       },
-      err => console.log("err: ", err)
+      (err) => console.log('err: ', err)
     );
   }
 
@@ -40,5 +40,5 @@ export enum DirectionEnum {
   East,
   West,
   North,
-  South
+  South,
 }
