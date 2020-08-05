@@ -52,6 +52,7 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Angular Command Line Interface – Angular CLI
 - Bootstrapping Angular
 - Angular Debugging Options
+- Updating Angular Projects
 
 ## TypeScript Fundamentals
 

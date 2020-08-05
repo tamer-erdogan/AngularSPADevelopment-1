@@ -8,36 +8,38 @@ declare global {
     isAnotherMonth(date: Date): boolean;
     isWeekend(): boolean;
     isSameDate(date: Date): boolean;
-    getStringDate(): String;
+    getStringDate(): string;
   }
 }
 
-Date.prototype.addDays = function(days: number): Date {
-  if (!days) return this;
-  let date = new Date();
+Date.prototype.addDays = function (days: number): Date {
+  if (!days) {
+    return this;
+  }
+  const date = new Date();
   date.setDate(date.getDate() + days);
 
   return date;
 };
 
-Date.prototype.isToday = function(): boolean {
-  let today = new Date();
+Date.prototype.isToday = function (): boolean {
+  const today = new Date();
   return this.isSameDate(today);
 };
 
-Date.prototype.clone = function(): Date {
+Date.prototype.clone = function (): Date {
   return new Date(+this);
 };
 
-Date.prototype.isAnotherMonth = function(date: Date): boolean {
+Date.prototype.isAnotherMonth = function (date: Date): boolean {
   return date && this.getMonth() !== date.getMonth();
 };
 
-Date.prototype.isWeekend = function(): boolean {
+Date.prototype.isWeekend = function (): boolean {
   return this.getDay() === 0 || this.getDay() === 6;
 };
 
-Date.prototype.isSameDate = function(date: Date): boolean {
+Date.prototype.isSameDate = function (date: Date): boolean {
   return (
     date &&
     this.getFullYear() === date.getFullYear() &&
@@ -46,48 +48,48 @@ Date.prototype.isSameDate = function(date: Date): boolean {
   );
 };
 
-Date.prototype.getStringDate = function(): String {
-  //Month names in Brazilian Portuguese
-  let monthNames = [
-    "Janeiro",
-    "Fevereiro",
-    "Março",
-    "Abril",
-    "Maio",
-    "Junho",
-    "Julho",
-    "Agosto",
-    "Setembro",
-    "Outubro",
-    "Novembro",
-    "Dezembro"
+Date.prototype.getStringDate = function (): string {
+  // Month names in Brazilian Portuguese
+  const monthNames = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
   ];
-  //Month names in English
-  //let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  let today = new Date();
+  // Month names in English
+  // let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const today = new Date();
   if (this.getMonth() == today.getMonth() && this.getDay() == today.getDay()) {
-    return "Hoje";
-    //return "Today";
+    return 'Hoje';
+    // return "Today";
   } else if (
     this.getMonth() == today.getMonth() &&
     this.getDay() == today.getDay() + 1
   ) {
-    return "Amanhã";
-    //return "Tomorrow";
+    return 'Amanhã';
+    // return "Tomorrow";
   } else if (
     this.getMonth() == today.getMonth() &&
     this.getDay() == today.getDay() - 1
   ) {
-    return "Ontem";
-    //return "Yesterday";
+    return 'Ontem';
+    // return "Yesterday";
   } else {
     return (
       this.getDay() +
-      " de " +
+      ' de ' +
       this.monthNames[this.getMonth()] +
-      " de " +
+      ' de ' +
       this.getFullYear()
     );
-    //return this.monthNames[this.getMonth()] + ' ' + this.getDay() + ', ' +  this.getFullYear();
+    // return this.monthNames[this.getMonth()] + ' ' + this.getDay() + ', ' +  this.getFullYear();
   }
 };
