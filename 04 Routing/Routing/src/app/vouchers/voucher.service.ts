@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { Voucher } from "./model";
-import { environment } from "src/environments/environment";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Voucher } from './model';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class VouchersService {
@@ -15,7 +15,7 @@ export class VouchersService {
 
   getVoucher(id: number): Observable<Voucher> {
     return this.getVouchers().pipe(
-      map(v => v.find((v: Voucher) => v.ID == id))
+      map((v) => v.find((v: Voucher) => v.ID == id))
     );
   }
 

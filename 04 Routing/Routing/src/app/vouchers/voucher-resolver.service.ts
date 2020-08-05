@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { Resolve, ActivatedRouteSnapshot } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 
-import { Observable } from "rxjs";
-import { Voucher } from "./model";
-import { VouchersService } from "./voucher.service";
+import { Observable } from 'rxjs';
+import { Voucher } from './model';
+import { VouchersService } from './voucher.service';
 
 @Injectable()
 export class VoucherResolver implements Resolve<Voucher> {
@@ -12,7 +12,7 @@ export class VoucherResolver implements Resolve<Voucher> {
   resolve(
     route: ActivatedRouteSnapshot
   ): Voucher | Observable<Voucher> | Promise<Voucher> {
-    let id = +route.params["id"];
+    const id = +route.params['id'];
     return this.vs.getVoucher(id);
   }
 }

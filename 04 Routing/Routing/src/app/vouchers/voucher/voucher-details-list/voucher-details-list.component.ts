@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
-import { VoucherDetail } from "../../model";
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { VoucherDetail } from '../../model';
 
 @Component({
-  selector: "app-voucher-details-list",
-  templateUrl: "./voucher-details-list.component.html",
-  styleUrls: ["./voucher-details-list.component.scss"]
+  selector: 'app-voucher-details-list',
+  templateUrl: './voucher-details-list.component.html',
+  styleUrls: ['./voucher-details-list.component.scss'],
 })
 export class VoucherDetailsListComponent implements OnInit {
   @Input() details: VoucherDetail[];
@@ -15,7 +15,7 @@ export class VoucherDetailsListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log("received details", this.details);
+    console.log('received details', this.details);
   }
 
   selectDetail(d: VoucherDetail) {

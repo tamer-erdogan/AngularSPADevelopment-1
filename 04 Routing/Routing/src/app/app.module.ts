@@ -1,27 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CKEditorModule } from 'ngx-ckeditor';
+import { AdminComponent } from './admin/admin.component';
+import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
-import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { VoucherComponent } from './vouchers/voucher/voucher.component';
-import { VouchersListComponent } from './vouchers/vouchers-list.component';
-import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
+import { RouteGuard } from './route.guard.service';
+import { EditorComponent } from './shared/editor/editor.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { SharedModule } from './shared/shared.module';
+import { UploaderComponent } from './shared/uploader/uploader.component';
+import { VoucherResolver } from './vouchers/voucher-resolver.service';
+import { VouchersService } from './vouchers/voucher.service';
 import { VoucherDetailComponent } from './vouchers/voucher/voucher-detail/voucher-detail.component';
 import { VoucherDetailsListComponent } from './vouchers/voucher/voucher-details-list/voucher-details-list.component';
-import { VouchersService } from './vouchers/voucher.service';
-import { HttpClientModule } from '@angular/common/http';
-import { VoucherResolver } from './vouchers/voucher-resolver.service';
-import { RouteGuard } from './route.guard.service';
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { EditorComponent } from './shared/editor/editor.component';
-import { UploaderComponent } from './shared/uploader/uploader.component';
-import { AdminComponent } from './admin/admin.component';
-import { CKEditorModule } from 'ngx-ckeditor';
-import { AdminModule } from './admin/admin.module';
+import { VoucherComponent } from './vouchers/voucher/voucher.component';
+import { VouchersListComponent } from './vouchers/vouchers-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,7 @@ import { AdminModule } from './admin/admin.module';
     PageNotFoundComponent,
     EditorComponent,
     UploaderComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,9 +44,9 @@ import { AdminModule } from './admin/admin.module';
     SharedModule,
     FormsModule,
     CKEditorModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [VouchersService, RouteGuard, VoucherResolver],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

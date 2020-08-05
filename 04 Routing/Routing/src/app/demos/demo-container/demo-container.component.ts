@@ -3,14 +3,14 @@ import { Event, NavigationEnd, Router } from '@angular/router';
 import { filter, flatMap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { MenuService } from 'src/app/shared/menu/menu.service';
-import { DemoItem } from '../demo-item';
+import { DemoItem } from '../demo-item..model';
 import { DemoService } from '../demo.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-demo-container',
   templateUrl: './demo-container.component.html',
-  styleUrls: ['./demo-container.component.scss']
+  styleUrls: ['./demo-container.component.scss'],
 })
 export class DemoContainerComponent implements OnInit {
   title: string = environment.title;
@@ -33,10 +33,10 @@ export class DemoContainerComponent implements OnInit {
 
   getWorbenchStyle() {
     let result = {};
-    this.ms.visible$.subscribe(visible => {
+    this.ms.visible$.subscribe((visible) => {
       result = visible
         ? {
-            'margin-left': '10px'
+            'margin-left': '10px',
           }
         : {};
     });
@@ -50,11 +50,11 @@ export class DemoContainerComponent implements OnInit {
         flatMap((evt: NavigationEnd) => {
           let childroute = evt.url.substr(evt.url.lastIndexOf('/') + 1);
           return this.demos$.pipe(
-            map(items => items.find(i => i.url.includes(childroute)))
+            map((items) => items.find((i) => i.url.includes(childroute)))
           );
         })
       )
-      .subscribe(demo => {
+      .subscribe((demo) => {
         this.header =
           demo != null
             ? `Demo: ${demo.title} - Component: ${demo.component}`

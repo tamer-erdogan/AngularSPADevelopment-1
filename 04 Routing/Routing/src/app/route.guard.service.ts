@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
   CanActivateChild,
   Router,
-  RouterStateSnapshot
-} from "@angular/router";
-import { Observable } from "rxjs";
-import { environment } from "src/environments/environment";
+  RouterStateSnapshot,
+} from '@angular/router';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class RouteGuard implements CanActivate, CanActivateChild {
@@ -21,7 +21,7 @@ export class RouteGuard implements CanActivate, CanActivateChild {
     if (this.allowAccess) {
       return true;
     } else {
-      this.router.navigate(["/"]);
+      this.router.navigate(['/']);
     }
   }
 
