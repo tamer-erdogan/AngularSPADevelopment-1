@@ -1,17 +1,17 @@
-import { Component, OnInit } from "@angular/core";
-import * as $ from "jquery";
+import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
-import { VoucherService } from "./voucher.service";
-import { GenericService } from "./generic.service";
-import { Voucher } from "../model";
+import { VoucherService } from './voucher.service';
+import { GenericService } from './generic.service';
+import { Voucher } from '../model';
 
 @Component({
-  selector: "app-services",
-  templateUrl: "./services.component.html",
-  styleUrls: ["./services.component.scss"]
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit {
-  url = "/assets/vouchers.json";
+  url = '/assets/vouchers.json';
 
   constructor() {}
 
@@ -20,20 +20,20 @@ export class ServicesComponent implements OnInit {
   usingjQueryAjaxCallback() {
     debugger;
 
-    //callback based
+    // callback based
     $.ajax({
-      type: "GET",
+      type: 'GET',
       url: this.url,
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      //classic callback pattern
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      // classic callback pattern
       success: function success(data: any) {
-        console.log("Data received from jQuery: ", data);
+        console.log('Data received from jQuery: ', data);
       },
-      //shortcut of callback pattern - function removed
+      // shortcut of callback pattern - function removed
       error(err: any) {
-        console.log("Error received from jQuery: ", err);
-      }
+        console.log('Error received from jQuery: ', err);
+      },
     });
   }
 
@@ -41,14 +41,14 @@ export class ServicesComponent implements OnInit {
     debugger;
 
     $.ajax({
-      type: "GET",
+      type: 'GET',
       url: this.url,
-      contentType: "application/json; charset=utf-8",
-      dataType: "json"
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
     })
-      .then(data => console.log("Data received from jQuery: ", data)) //success
-      .catch(err => console.log("Error received from jQuery: ", err)) //error
-      .done(() => console.log("done"));
+      .then((data) => console.log('Data received from jQuery: ', data)) // success
+      .catch((err) => console.log('Error received from jQuery: ', err)) // error
+      .done(() => console.log('done'));
   }
 
   logPipe = (msg: string, data: any) => {
@@ -58,23 +58,23 @@ export class ServicesComponent implements OnInit {
   usingPromises() {
     debugger;
 
-    //Mocking a promise function
+    // Mocking a promise function
     function getMockPromise(data: any): Promise<string> {
       return new Promise<string>((resolve, reject) => {
         setTimeout(() => {
-          console.log("Async Task Complete");
+          console.log('Async Task Complete');
           if (true) {
-            resolve(JSON.stringify({ Id: 1, Person: "Hugo Wolf" }));
+            resolve(JSON.stringify({ Id: 1, Person: 'Hugo Wolf' }));
           } else {
-            reject("Big Error: Promise rejected");
+            reject('Big Error: Promise rejected');
           }
         }, 1000);
       });
     }
 
-    getMockPromise("Hello World")
-      .then(data => this.logPipe("Date received from getMockPromise", data))
-      .catch(err => console.log("Err:", err));
+    getMockPromise('Hello World')
+      .then((data) => this.logPipe('Date received from getMockPromise', data))
+      .catch((err) => console.log('Err:', err));
   }
 
   chainingPromises() {
@@ -83,7 +83,7 @@ export class ServicesComponent implements OnInit {
     function popFirstAsync(data: Voucher[]): Promise<Voucher[]> {
       return new Promise<Voucher[]>((resolve, reject) => {
         setTimeout(() => {
-          console.log("popFirstAsync() received data", data);
+          console.log('popFirstAsync() received data', data);
           if (true) {
             resolve(data.slice(1, data.length));
           } else {
@@ -95,16 +95,16 @@ export class ServicesComponent implements OnInit {
     }
 
     $.ajax({
-      type: "GET",
+      type: 'GET',
       url: this.url,
-      contentType: "application/json; charset=utf-8",
-      dataType: "json"
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
     })
-      .then(data => popFirstAsync(data))
-      .then(data => this.logPipe("Data after processing", data))
-      .catch(err => this.logPipe("Error in Chain: ", err));
+      .then((data) => popFirstAsync(data))
+      .then((data) => this.logPipe('Data after processing', data))
+      .catch((err) => this.logPipe('Error in Chain: ', err));
 
-    console.log("chainingPromises() finished");
+    console.log('chainingPromises() finished');
   }
 
   usingFetch() {
@@ -112,20 +112,20 @@ export class ServicesComponent implements OnInit {
 
     fetch(this.url)
       .then<Voucher[]>((resp: Response) => {
-        console.log("Response received from fetch", resp);
-        return resp.json(); //Notice Response Object
+        console.log('Response received from fetch', resp);
+        return resp.json(); // Notice Response Object
       })
       .then((data: Voucher[]) => {
-        console.log("Data received from fetch", data);
+        console.log('Data received from fetch', data);
       });
   }
 
   usingFetchAwait() {
     debugger;
     async function getAllVouchers() {
-      let response = await fetch("/assets/vouchers.json");
-      let voucher = await response.json();
-      console.log("Data received using fetch - await");
+      const response = await fetch('/assets/vouchers.json');
+      const voucher = await response.json();
+      console.log('Data received using fetch - await');
       console.log(voucher);
     }
 
@@ -135,54 +135,54 @@ export class ServicesComponent implements OnInit {
   postFetch() {
     debugger;
 
-    let vouchersapi = "http://localhost:5000/api/vouchers";
+    const vouchersapi = 'http://localhost:5000/api/vouchers';
 
-    let data = {
-      Date: "01.01.2016",
+    const data = {
+      Date: '01.01.2016',
       Amount: 100,
-      Text: "Posted Voucher",
-      Paid: false
+      Text: 'Posted Voucher',
+      Paid: false,
     };
 
-    let options = {
-      method: "POST",
+    const options = {
+      method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
     };
 
     fetch(vouchersapi, options)
-      .then(function(res) {
+      .then(function (res) {
         if (res.ok) {
           return res.statusText;
         } else {
           throw Error(`Request rejected with status ${res.status}`);
         }
       })
-      .then(data => console.log(data))
-      .catch(err => console.log(err));
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
   }
 
   consumeService() {
     debugger;
 
-    var service = new VoucherService();
+    let service = new VoucherService();
     service.getVouchers().then((data: Voucher[]) => {
-      console.log("Data from VoucherService ", data);
+      console.log('Data from VoucherService ', data);
     });
   }
 
   consumeGenericService() {
     debugger;
 
-    let serviceOfT: GenericService<Voucher> = new GenericService<Voucher>(
+    const serviceOfT: GenericService<Voucher> = new GenericService<Voucher>(
       this.url
     );
 
     serviceOfT.getItems().then((data: Voucher[]) => {
-      console.log("Data received from Generic Service: ", data);
+      console.log('Data received from Generic Service: ', data);
     });
   }
 }

@@ -4,8 +4,8 @@ export class Calculator {
   }
 }
 
-export const constKey = "myKey";
+export const constKey = 'myKey';
 
 export function myFunction() {
-  console.log("abc");
+  console.log('abc');
 }

@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import * as moment from "moment";
+import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
-  selector: "app-object-literals",
-  templateUrl: "./object-literals.component.html",
-  styleUrls: ["./object-literals.component.scss"]
+  selector: 'app-object-literals',
+  templateUrl: './object-literals.component.html',
+  styleUrls: ['./object-literals.component.scss'],
 })
 export class ObjectLiteralsComponent implements OnInit {
   constructor() {}
@@ -21,9 +21,9 @@ export class ObjectLiteralsComponent implements OnInit {
     // };
 
     var otherPerson = <any>{};
-    otherPerson.smile = function() {};
+    otherPerson.smile = function () {};
 
-    let person: any = { Id: 1, Name: "Alexander" };
+    let person: any = { Id: 1, Name: 'Alexander' };
     person.walk = () => console.log(`I am ${person.Name} and I'm walking`);
 
     person.walk();
@@ -37,7 +37,7 @@ export class ObjectLiteralsComponent implements OnInit {
       return {
         make: make,
         model: model,
-        value: value
+        value: value,
       };
     }
 
@@ -49,7 +49,7 @@ export class ObjectLiteralsComponent implements OnInit {
         // name
         make,
         model,
-        value
+        value,
       };
     }
 
@@ -57,15 +57,15 @@ export class ObjectLiteralsComponent implements OnInit {
       return { ...person };
     }
 
-    let person: any = { Id: 1, Name: "Alexander" };
+    let person: any = { Id: 1, Name: 'Alexander' };
     var cloned = getPersonClone(person);
 
     //Method definition shorthand
     function getBusES5(value) {
       return {
-        depreciate: function() {
+        depreciate: function () {
           this.value -= 2500;
-        }
+        },
       };
     }
 
@@ -75,7 +75,7 @@ export class ObjectLiteralsComponent implements OnInit {
         // omits `function` keyword & colon
         depreciate() {
           this.value -= 2500;
-        }
+        },
       };
     }
   }
@@ -84,11 +84,11 @@ export class ObjectLiteralsComponent implements OnInit {
     debugger;
 
     // object pattern matching
-    let { lName, fName } = { fName: "John", lName: "Doe" };
+    let { lName, fName } = { fName: 'John', lName: 'Doe' };
     //let { Name, FirstName } = { fName: "John", lName: "Doe" };
 
     // output: Doe, John
-    console.log(lName + ", " + fName);
+    console.log(lName + ', ' + fName);
 
     var rect = { x: 0, y: 10, width: 15, height: 20 };
 
@@ -104,9 +104,9 @@ export class ObjectLiteralsComponent implements OnInit {
   objAssign() {
     debugger;
 
-    var obj = { name: "alex" };
+    var obj = { name: 'alex' };
     var copy = Object.assign({}, obj, {
-      birth: moment("19700402", "YYYYMMDD").format("MMM Do YY")
+      birth: moment('19700402', 'YYYYMMDD').format('MMM Do YY'),
     });
     console.log(copy);
   }
@@ -114,28 +114,28 @@ export class ObjectLiteralsComponent implements OnInit {
   valref() {
     debugger;
 
-    let person: any = { Id: 1, Name: "Alexander" };
+    let person: any = { Id: 1, Name: 'Alexander' };
     let myNumber: number = 100;
 
     function passArgs(nbr: number, pers: any) {
       nbr += 1;
-      pers.Name = "Alex";
+      pers.Name = 'Alex';
     }
 
     passArgs(myNumber, person);
-    console.log("result for myNumber & person:", myNumber, person);
+    console.log('result for myNumber & person:', myNumber, person);
 
     myNumber = 500;
-    person.Name = "Alexander";
+    person.Name = 'Alexander';
     passArgs(myNumber, Object.assign({}, person));
     console.log(
-      "result for myNumber & person using Object.assign():",
+      'result for myNumber & person using Object.assign():',
       myNumber,
       person
     );
 
     passArgs(myNumber, { ...person });
-    console.log("result for myNumber & person using spread:", myNumber, person);
+    console.log('result for myNumber & person using spread:', myNumber, person);
   }
 
   copyspread() {
@@ -147,10 +147,10 @@ export class ObjectLiteralsComponent implements OnInit {
     console.log(remaining);
 
     //Spread operator on objects
-    var simplePerson = { name: "alex" };
+    var simplePerson = { name: 'alex' };
     var dataPerson = {
-      birth: moment("19700402", "YYYYMMDD").format("MMM Do YY"),
-      job: "dev dude"
+      birth: moment('19700402', 'YYYYMMDD').format('MMM Do YY'),
+      job: 'dev dude',
     };
     console.log({ ...dataPerson });
 

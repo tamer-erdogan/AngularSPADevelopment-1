@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core"; //ES 6 module import
-import * as $ from "jquery"; //Non ES6 Moduel import
-import * as moment from "moment"; //Non ES6 Moduel import
-import { Voucher } from "../model";
-import "./date-extensions";
+import { Component, OnInit } from '@angular/core'; // ES 6 module import
+import * as $ from 'jquery'; // Non ES6 Moduel import
+import * as moment from 'moment'; // Non ES6 Moduel import
+import { Voucher } from '../model';
+import './date-extensions';
 
 @Component({
-  selector: "app-types",
-  templateUrl: "./types.component.html",
-  styleUrls: ["./types.component.scss"]
+  selector: 'app-types',
+  templateUrl: './types.component.html',
+  styleUrls: ['./types.component.scss'],
 })
 export class TypesComponent implements OnInit {
   constructor() {}
@@ -17,36 +17,36 @@ export class TypesComponent implements OnInit {
   basicVariables() {
     debugger;
 
-    var myname: string = "alex";
+    const myname = 'alex';
 
-    //Numbers
-    var age: number;
-    var weight: number = 83.12;
-    var dogWeight = 25.4;
+    // Numbers
+    const age = 50;
+    const weight = 83.12;
+    const dogWeight = 25.4;
     // dogWeight = "heavy";
-    var rand = Math.random();
+    const rand = Math.random();
 
-    var numbers: number[] = [];
-    var myNumArray: Array<number> = new Array();
+    const numbers: number[] = [];
+    const myNumArray: Array<number> = new Array();
 
     numbers[0] = 1;
     // numbers.push("two"); // compile-time error
 
     let notSure: any = 4;
-    notSure = "maybe a string instead";
+    notSure = 'maybe a string instead';
     notSure = false; // okay, definitely a boolean
 
-    var isCustomer: boolean = false;
-    var finished = false;
+    const isCustomer = false;
+    const finished = false;
 
-    //strings
-    var dogName: string = "Giro";
-    var otherDogName = "Soi";
-    var myString = "ten";
+    // strings
+    const dogName = 'Giro';
+    const otherDogName = 'Soi';
+    const myString = 'ten';
 
-    var strings: Array<string> = ["hubert", "Sam"];
-    strings.push("Hans");
-    //strings[1] = 1337; // compile time error
+    const strings: Array<string> = ['hubert', 'Sam'];
+    strings.push('Hans');
+    // strings[1] = 1337; // compile time error
 
     // Function returning never must have unreachable end point
     function error(message: string): never {
@@ -54,60 +54,60 @@ export class TypesComponent implements OnInit {
     }
 
     // Not much else we can assign to these variables!
-    var u: undefined = undefined;
-    var n: null = null;
+    let u: undefined;
+    const n: null = null;
   }
 
   useLetConst() {
     debugger;
 
-    var index: number = 0;
-    var array = ["a", "b", "c"];
-    for (let index: number = 0; index < array.length; index++) {
-      console.log("Inside for ..." + index);
-      console.log("Inside for ..." + array[index]);
+    const index = 0;
+    const array = ['a', 'b', 'c'];
+    for (let index = 0; index < array.length; index++) {
+      console.log('Inside for ...' + index);
+      console.log('Inside for ...' + array[index]);
     }
     console.log(index); // 0
     const pi = 3.14;
-    //pi = 2;
+    // pi = 2;
 
-    const person = { name: "john", age: 22 };
-    person.name = "franz";
+    const person = { name: 'john', age: 22 };
+    person.name = 'franz';
 
-    //leveling up
-    var result = x + "xyz";
+    // leveling up
+    // const result = x + 'xyz';
     // var letresult = p + "xyz";
 
-    let p = "abc";
-    var x = "fgh";
+    const p = 'abc';
+    const x = 'fgh';
   }
 
   stringFunctions() {
     debugger;
 
-    var productID = 100;
-    var category = "music";
+    const productID = 100;
+    const category = 'music';
 
-    //string concatenation
-    var url = "http://server/" + category + "/" + productID;
+    // string concatenation
+    const url = 'http://server/' + category + '/' + productID;
     console.log(url);
 
-    //Template Literals using Backticks
-    var tl = `http://server/${category}/${productID}`;
+    // Template Literals using Backticks
+    const tl = `http://server/${category}/${productID}`;
 
     console.log(tl);
 
-    //startswith
-    var str = "To be, or not to be, that is the question.";
-    console.log(str.startsWith("To be")); // true
-    console.log(str.endsWith("question.")); // true
+    // startswith
+    const str = 'To be, or not to be, that is the question.';
+    console.log(str.startsWith('To be')); // true
+    console.log(str.endsWith('question.')); // true
 
-    //include -> C# string.contains
+    // include -> C# string.contains
     function countString(ts) {
-      const characters = ["a", "b", "c"];
+      const characters = ['a', 'b', 'c'];
 
       let ct = 0;
-      for (var char of ts) {
+      for (const char of ts) {
         if (characters.includes(char)) {
           ct++;
         }
@@ -115,23 +115,20 @@ export class TypesComponent implements OnInit {
       return ct;
     }
 
-    console.log(`chars included in your string: ${countString("abheben")}`);
+    console.log(`chars included in your string: ${countString('abheben')}`);
   }
 
   useVoidAny() {
     debugger;
 
     function handleClick(): void {
-      var g = "I don't return anything.";
+      const g = "I don't return anything.";
       console.log(g);
-      //return g;
+      // return g;
     }
 
-    //let nonsens: void = 10; //Conversion error
-    let nonsens: void = undefined;
-
-    let likeadelegate: void = handleClick();
-    //execute it
+    const likeadelegate: void = handleClick();
+    // execute it
     likeadelegate;
   }
 
@@ -141,28 +138,28 @@ export class TypesComponent implements OnInit {
     enum Happyness {
       happy = 2,
       unhappy = 4,
-      ok = 6
+      ok = 6,
     }
 
-    let isHappy: Happyness = Happyness.happy;
+    const isHappy: Happyness = Happyness.happy;
 
     enum Sex {
-      male = "m",
-      female = "f",
-      undefined = "u"
+      male = 'm',
+      female = 'f',
+      undefined = 'u',
     }
 
     enum VoucherStatus {
       draft,
       complete,
-      pending
+      pending,
     }
 
-    var status: VoucherStatus;
+    let status: VoucherStatus;
     status = VoucherStatus.draft;
     status = VoucherStatus.complete;
     // status = VoucherStatus.unfinished; // compile-time error
-    //status = "on the way"; // compile-time error
+    // status = "on the way"; // compile-time error
 
     if (status === VoucherStatus.complete) {
     }
@@ -179,65 +176,65 @@ export class TypesComponent implements OnInit {
           console.log(`got voucher ${v}: will call the accountant`);
           break;
         default:
-          console.log("...");
+          console.log('...');
           break;
       }
     }
 
-    var newVoucher = new Voucher();
+    const newVoucher = new Voucher();
 
-    let v: Voucher = <Voucher>{
+    const v: Voucher = {
       ID: 1,
-      Text: "Media Markt",
+      Text: 'Media Markt',
       Amount: 22,
-      Date: new Date()
-    };
+      Date: new Date(),
+    } as Voucher;
 
     handleVoucher(v, status);
   }
 
   useTypings() {
-    //using moment
-    let dt = new Date(1990, 3, 2);
-    console.log("Using time format: ", moment(dt).format("LTS"));
+    // using moment
+    const dt = new Date(1990, 3, 2);
+    console.log('Using time format: ', moment(dt).format('LTS'));
 
-    //using jQuery
-    let myArray = ["Angular", "React", "SPFx"];
-    console.log("myArray is an Array: ", $.isArray(myArray));
+    // using jQuery
+    const myArray = ['Angular', 'React', 'SPFx'];
+    console.log('myArray is an Array: ', $.isArray(myArray));
   }
 
   usePrototypes() {
-    let dt = new Date();
-    let weekLater = dt.addDays(7);
+    const dt = new Date();
+    const weekLater = dt.addDays(7);
     console.log(`${dt} is one week before ${weekLater}`);
   }
 
   introArrays() {
     debugger;
 
-    //declaration using type followed by []
-    var customers: string[] = ["Alex", "Giro", "Sonja", "Soi", "David"];
-    //declaration using generic array type
-    let nbrs: Array<number> = [3, 4, 5];
+    // declaration using type followed by []
+    const customers: string[] = ['Alex', 'Giro', 'Sonja', 'Soi', 'David'];
+    // declaration using generic array type
+    const nbrs: Array<number> = [3, 4, 5];
 
-    console.log(customers.length + "Persons in Array");
-    customers[2] = "Brunhilde";
-    console.log("Person with index 1 is" + customers[1]);
+    console.log(customers.length + 'Persons in Array');
+    customers[2] = 'Brunhilde';
+    console.log('Person with index 1 is' + customers[1]);
 
-    //for ... of
-    let list: number[] = [4, 5, 6];
+    // for ... of
+    const list: number[] = [4, 5, 6];
 
-    for (let i in list) {
+    for (const i in list) {
       console.log(i); // "0", "1", "2", -> for ... in loop returns index
     }
 
-    for (let i of list) {
+    for (const i of list) {
       console.log(i); // "4", "5", "6"  -> for ... of loop returns element
     }
 
     // array destructuring
-    let arrNbr = [8, 4, 100, -5, 20];
-    let [first, second, third] = arrNbr;
+    const arrNbr = [8, 4, 100, -5, 20];
+    const [first, second, third] = arrNbr;
     console.log(third, second, first); // output: 100, 4, 8
   }
 
@@ -251,14 +248,14 @@ export class TypesComponent implements OnInit {
       region: string;
     }
 
-    var fruits: Fruit[] = [
-      { name: "apples", quantity: 2, price: 3, region: "europe" },
-      { name: "bananas", quantity: 0, price: 5, region: "caribean" },
-      { name: "cherries", quantity: 5, price: 8, region: "europe" }
-    ]; //-> Json Objects from REST call
+    const fruits: Fruit[] = [
+      { name: 'apples', quantity: 2, price: 3, region: 'europe' },
+      { name: 'bananas', quantity: 0, price: 5, region: 'caribean' },
+      { name: 'cherries', quantity: 5, price: 8, region: 'europe' },
+    ]; // -> Json Objects from REST call
 
-    //forEach
-    fruits.forEach(function(fruit) {
+    // forEach
+    fruits.forEach(function (fruit) {
       fruit.quantity++;
     });
 
@@ -266,92 +263,98 @@ export class TypesComponent implements OnInit {
       item.quantity++;
     });
 
-    fruits.forEach(item => item.quantity++);
+    fruits.forEach((item) => item.quantity++);
 
-    //find -> returns first item
-    var cherry = fruits.find(function(fruit) {
-      return fruit.name === "cherries";
+    // find -> returns first item
+    const cherry = fruits.find(function (fruit) {
+      return fruit.name === 'cherries';
     });
 
     console.log(cherry);
 
-    //filter -> returns array
-    var cheap = fruits.filter(function(item) {
+    // filter -> returns array
+    const cheap = fruits.filter(function (item) {
       return item.price < 6;
     });
     console.log(cheap);
 
-    //map -> shape arr
-    var names = fruits.map(function(item) {
+    // map -> shape arr
+    const names = fruits.map(function (item) {
       return item.name;
     });
 
-    var lables = fruits.map(function(item) {
+    const lables = fruits.map(function (item) {
       return {
         label: `${item.name} costs ${item.price}`,
-        stockInEuro: item.quantity * item.price
+        stockInEuro: item.quantity * item.price,
       };
     });
 
-    //reduce:  You want to find a cumulative or concatenated value based on elements across the array
+    // reduce:  You want to find a cumulative or concatenated value based on elements across the array
     // array.reduce(callback[, initialValue]);
     class RocketLaunch {
       country: string;
       launches: number;
     }
 
-    var rockets: RocketLaunch[] = [
-      { country: "Russia", launches: 32 },
-      { country: "US", launches: 23 },
-      { country: "China", launches: 16 },
-      { country: "Europe(ESA)", launches: 7 },
-      { country: "India", launches: 4 },
-      { country: "Japan", launches: 3 }
+    const rockets: RocketLaunch[] = [
+      { country: 'Russia', launches: 32 },
+      { country: 'US', launches: 23 },
+      { country: 'China', launches: 16 },
+      { country: 'Europe(ESA)', launches: 7 },
+      { country: 'India', launches: 4 },
+      { country: 'Japan', launches: 3 },
     ];
 
-    var launches = rockets.reduce(function(agg, item) {
+    let launches = rockets.reduce(function (agg, item) {
       return agg + item.launches;
     }, 0);
 
     launches = rockets.reduce(
       (agg: number, item: RocketLaunch) => agg + item.launches,
       0
-    ); //same as above
+    ); // same as above
 
-    console.log("launches so far: ", launches);
+    console.log('launches so far: ', launches);
 
-    let food = [
-      { id: 1, name: "Butter Chicken", price: 9, calories: 1200 },
-      { id: 2, name: "Curry Wurst", price: 2.7, calories: 730 },
-      { id: 3, name: "Blini with Salmon", price: 8.3, calories: 600 }
+    const food = [
+      { id: 1, name: 'Butter Chicken', price: 9, calories: 1200 },
+      { id: 2, name: 'Curry Wurst', price: 2.7, calories: 730 },
+      { id: 3, name: 'Blini with Salmon', price: 8.3, calories: 600 },
     ];
 
-    let nextId =
+    const nextId =
       food.reduce((acc, f) => (acc = acc > f.id ? acc : f.id), 0) + 1;
 
-    console.log("next id would be " + nextId);
+    console.log('next id would be ' + nextId);
 
-    //splice -> manipulate arrays
+    // splice -> manipulate arrays
 
-    var dogs = ["whippet", "galgo espanol", "magyar whistler", "magyar agar"];
-    dogs.splice(2, 0, "chart polski");
-    console.log(dogs); //["whippet", "galgo espanol", "chart polski", "magyar whistler", "magyar agar"]
+    const dogs = ['whippet', 'galgo espanol', 'magyar whistler', 'magyar agar'];
+    dogs.splice(2, 0, 'chart polski');
+    console.log(dogs); // ["whippet", "galgo espanol", "chart polski", "magyar whistler", "magyar agar"]
     dogs.splice(3, 1);
-    console.log(dogs); //["whippet", "galgo espanol", "chart polski", "magyar agar"]
+    console.log(dogs); // ["whippet", "galgo espanol", "chart polski", "magyar agar"]
 
-    //flatmap
+    // flatmap
     const orders = [
       {
         orderId: 1,
-        items: [{ name: "abc", price: 2.22 }, { name: "ded", price: 4.22 }]
+        items: [
+          { name: 'abc', price: 2.22 },
+          { name: 'ded', price: 4.22 },
+        ],
       },
       {
         orderId: 2,
-        items: [{ name: "asdfbc", price: 6.22 }, { name: "sdf", price: 8.22 }]
-      }
+        items: [
+          { name: 'asdfbc', price: 6.22 },
+          { name: 'sdf', price: 8.22 },
+        ],
+      },
     ];
 
-    const items = orders.flatMap(o => o.items.map(i => i.name));
+    const items = orders.flatMap((o) => o.items.map((i) => i.name));
   }
 
   chainingArrayHelpers() {
@@ -361,27 +364,27 @@ export class TypesComponent implements OnInit {
       breed: string;
     }
 
-    let dogs: Dog[] = [
+    const dogs: Dog[] = [
       {
-        name: "Cleo",
+        name: 'Cleo',
         age: 17,
-        breed: "Whippet"
+        breed: 'Whippet',
       },
       {
-        name: "Giro",
+        name: 'Giro',
         age: 9,
-        breed: "Galgo Espanol"
+        breed: 'Galgo Espanol',
       },
       {
-        name: "Flora",
+        name: 'Flora',
         age: 7,
-        breed: "Italian Sighthound"
+        breed: 'Italian Sighthound',
       },
       {
-        name: "Soi",
+        name: 'Soi',
         age: 5,
-        breed: "Whippet"
-      }
+        breed: 'Whippet',
+      },
     ];
 
     // Tasks:
@@ -389,38 +392,38 @@ export class TypesComponent implements OnInit {
     // Translate into dog years
     // Sum result
 
-    //typical ECMA Script 5 pattern
+    // typical ECMA Script 5 pattern
     function getAges(doggies) {
       let sum = 0;
-      for (var i = 0; i < doggies.length; i++) {
-        if (doggies[i].breed === "Whippet") {
-          let tempAge = doggies[i].age;
+      for (let i = 0; i < doggies.length; i++) {
+        if (doggies[i].breed === 'Whippet') {
+          const tempAge = doggies[i].age;
           sum += tempAge * 7;
         }
       }
       return sum;
     }
-    console.log("Ages using for loop: ", getAges(dogs));
+    console.log('Ages using for loop: ', getAges(dogs));
 
     // functional approach
 
-    let whippets = dogs.filter(dog => {
-      return dog.breed === "Whippet";
+    const whippets = dogs.filter((dog) => {
+      return dog.breed === 'Whippet';
     });
 
-    let adjustAge = dogs.map(dog => dog.age * 7);
+    const adjustAge = dogs.map((dog) => dog.age * 7);
 
-    let calSum = dogs.reduce((sum, animal) => {
+    const calSum = dogs.reduce((sum, animal) => {
       return sum + animal.age;
     }, 0);
 
-    let sumFunctional = whippets
-      .map(dog => dog.age * 7)
+    const sumFunctional = whippets
+      .map((dog) => dog.age * 7)
       .reduce((sum, animal_age) => {
         return sum + animal_age;
       });
 
-    console.log("Ages using functional approach: ", getAges(dogs));
+    console.log('Ages using functional approach: ', getAges(dogs));
   }
 
   restParams() {
@@ -431,113 +434,116 @@ export class TypesComponent implements OnInit {
       bets.forEach((nbr: number) => console.log(nbr));
     }
 
-    playLotto("Hannes", 3, 12, 45, 48);
-    playLotto("Hugo", 3, 12, 45, 48, 55, 22);
+    playLotto('Hannes', 3, 12, 45, 48);
+    playLotto('Hugo', 3, 12, 45, 48, 55, 22);
   }
 
   spreadOperator() {
     console.log(Math.max(3, 5, 1)); // 5
 
-    let arr = [3, 5, 1];
-    //console.log( Math.max(arr) ); // NaN
+    const arr = [3, 5, 1];
+    // console.log( Math.max(arr) ); // NaN
     console.log(Math.max(...arr)); // 5 (spread turns array into a list of arguments)
 
-    let arr1 = [1, -2, 3, 90];
-    let arr2 = [8, 3, -8, 1];
+    const arr1 = [1, -2, 3, 90];
+    const arr2 = [8, 3, -8, 1];
 
-    console.log("Maximum is", Math.max(1, ...arr1, 2, ...arr2, 25)); // 90
+    console.log('Maximum is', Math.max(1, ...arr1, 2, ...arr2, 25)); // 90
 
-    //Sample from Above
+    // Sample from Above
 
     function playLotto(name: string, ...bets: number[]) {
       console.log(`${name} is playing the following lottery numbers: `);
       bets.forEach((nbr: number) => console.log(nbr));
     }
 
-    playLotto("Hannes", 3, 12, 45, 48);
+    playLotto('Hannes', 3, 12, 45, 48);
 
-    let numbers = [3, 12, 45, 48];
+    const numbers = [3, 12, 45, 48];
 
-    //calling a function with ...rest param using ...spread
-    playLotto("Hannes", ...numbers);
+    // calling a function with ...rest param using ...spread
+    playLotto('Hannes', ...numbers);
   }
 
-  //-> C# Dictionary
+  // -> C# Dictionary
   maps() {
     debugger;
 
-    var myMap = new Map<string, any>();
-    var myString = "a string";
-    var voucher = { Id: 33, Text: "Diesel", Amount: 56 };
-    var logFunction = function(param) {
+    const myMap = new Map<string, any>();
+    const myString = 'a string';
+    const voucher = { Id: 33, Text: 'Diesel', Amount: 56 };
+    const logFunction = function (param) {
       console.log(`logFuntion is logging: ${param}`);
     };
 
     // consts are sometimes easier to use
-    const keyObject = "keyObject";
-    const keyFunct = "keyFunct";
+    const keyObject = 'keyObject';
+    const keyFunct = 'keyFunct';
 
     // setting the values
-    myMap.set("keyString", myString);
+    myMap.set('keyString', myString);
     myMap.set(keyObject, voucher);
     myMap.set(keyFunct, logFunction);
 
-    console.log("Map size: " + myMap.size); // 3
+    console.log('Map size: ' + myMap.size); // 3
 
     // getting the values
-    let strResult = myMap.get("keyString"); // "value associated with 'a string'"
+    const strResult = myMap.get('keyString'); // "value associated with 'a string'"
     myMap.get(keyObject); // "value associated with 'a string'" because keyString === 'a string'
-    myMap.get(keyFunct)("test"); // "value associated with keyObj"
+    myMap.get(keyFunct)('test'); // "value associated with keyObj"
 
-    myMap.delete("keyString");
+    myMap.delete('keyString');
     myMap.clear();
   }
 
-  //-> Indexed Array
+  // -> Indexed Array
   sets() {
     // debugger;
 
-    var mySet = new Set<any>();
+    const mySet = new Set<any>();
     mySet.add(1);
-    mySet.add("some text");
-    var o = { a: 1, b: 2 };
+    mySet.add('some text');
+    const o = { a: 1, b: 2 };
     mySet.add(o);
 
     mySet.has(1); // true
     mySet.has(3); // false, 3 has not been added to the set
     mySet.has(Math.sqrt(25)); // true
-    mySet.has("Some Text".toLowerCase()); // true
+    mySet.has('Some Text'.toLowerCase()); // true
     mySet.has(o); // true
-    var size = mySet.size; // 4
+    const size = mySet.size; // 4
 
     console.log(`acessing using: mySet[0] gives: `, mySet[0]);
 
-    mySet.forEach(item => console.log(`item in set: ${item}`));
+    mySet.forEach((item) => console.log(`item in set: ${item}`));
 
     mySet.delete(5); // removes 5 from set
 
-    //iterate set
+    // iterate set
 
-    let log = (caller, sum) => console.log(`${caller} returned ${sum}`);
+    const log = (caller, sum) => console.log(`${caller} returned ${sum}`);
 
-    var setNbrs: Set<number> = new Set<number>([2, 4, 88]);
+    const setNbrs: Set<number> = new Set<number>([2, 4, 88]);
 
-    let sum = Array.from(setNbrs).reduce(function(a, b) {
+    const sum = Array.from(setNbrs).reduce(function (a, b) {
       return a + b;
     }, 100);
 
-    log("Sum with initail of 100", sum);
+    log('Sum with initail of 100', sum);
 
-    let totalArrow = Array.from(setNbrs).reduce((a, b) => a + b);
+    const totalArrow = Array.from(setNbrs).reduce((a, b) => a + b);
 
-    log("totalArrow", totalArrow);
+    log('totalArrow', totalArrow);
 
-    log("totalArrow 2", Array.from(setNbrs).reduce((a, b) => a + b));
+    log(
+      'totalArrow 2',
+      Array.from(setNbrs).reduce((a, b) => a + b)
+    );
   }
 
   usePipeline() {
-    const double = n => n * 2;
-    const increment = n => n + 1;
+    const double = (n) => n * 2;
+    const increment = (n) => n + 1;
 
     // without pipeline operator
     double(increment(double(double(5)))); // 42

@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-interfaces",
-  templateUrl: "./interfaces.component.html",
-  styleUrls: ["./interfaces.component.scss"]
+  selector: 'app-interfaces',
+  templateUrl: './interfaces.component.html',
+  styleUrls: ['./interfaces.component.scss'],
 })
 export class InterfacesComponent implements OnInit {
   constructor() {}
@@ -23,11 +23,11 @@ export class InterfacesComponent implements OnInit {
     class Knight implements IHumanBeeing {
       name: string;
       birthDate: Date;
-      weapon: string = "Battle Axe";
+      weapon: string = 'Battle Axe';
     }
 
     let rob: Knight = new Knight();
-    rob.name = "Rob Stark";
+    rob.name = 'Rob Stark';
   }
 
   interfacesNullability() {
@@ -62,7 +62,7 @@ export class InterfacesComponent implements OnInit {
     }
     var position: ILongLat = { Long: 17.123123, Lat: 12.123123 };
     console.log(
-      "We are at position Long: " + position.Long + " Lat: " + position.Lat
+      'We are at position Long: ' + position.Long + ' Lat: ' + position.Lat
     );
   }
 
@@ -77,7 +77,7 @@ export class InterfacesComponent implements OnInit {
       console.log(labelledObj.label);
     }
 
-    let myObj = { size: 10, label: "Size 10 Object" };
+    let myObj = { size: 10, label: 'Size 10 Object' };
     printLabel(myObj);
 
     //Function Interfaces
@@ -86,7 +86,7 @@ export class InterfacesComponent implements OnInit {
       (source: string, subString: string): boolean;
     }
 
-    var searchDelegate: SearchFunc = function(
+    var searchDelegate: SearchFunc = function (
       source: string,
       subString: string
     ) {
