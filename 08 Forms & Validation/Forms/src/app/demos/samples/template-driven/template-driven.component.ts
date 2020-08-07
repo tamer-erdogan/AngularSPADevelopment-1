@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Person, WorkLifeBalance } from '../person.model';
-import { PersonService } from '../person.service';
 import { emptyPerson, wealthOpts } from '../empty-person';
+import { Person } from '../person.model';
+import { PersonService } from '../person.service';
 
 @Component({
   selector: 'app-template-driven',
